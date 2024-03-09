@@ -2,10 +2,6 @@
 const route = useRoute()
 const app = useAppConfig()
 
-/**
- * Global head configuration
- * @see https://nuxt.com/docs/getting-started/seo-meta
- */
 useHead({
   title: () => route.meta?.title ?? '',
   titleTemplate: (titleChunk) => {
@@ -13,6 +9,7 @@ useHead({
       ? `${titleChunk} - ${app.tairo.title}`
       : `${app.tairo.title}`
   },
+
   htmlAttrs: {
     lang: 'en',
     dir: 'ltr',
@@ -26,43 +23,32 @@ useHead({
   ],
 
   meta: [
-    { name: 'description', content: () => route.meta.description ?? 'The most advanced Nuxt and Tailwind CSS dashboard template' },
+    {
+      name: 'description',
+      content:
+        'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+    },
     {
       name: 'twitter:card',
       content: 'summary_large_image',
     },
     {
-      name: 'twitter:site',
-      content: '@cssninjaStudio',
-    },
-    {
-      name: 'og:image:type',
-      content: 'image/png',
-    },
-    {
-      name: 'og:image:width',
-      content: '1200',
-    },
-    {
-      name: 'og:image:height',
-      content: '630',
-    },
-    {
-      name: 'og:image',
-      content: `https://media.cssninja.io/embed/marketplace/product/wide.png?headline=${encodeURIComponent(
-        route.meta.description ||
-          (route.meta.preview
-            ? `${route.meta.preview?.title} - ${route.meta.preview?.description}`
-            : 'Nuxt & Tailwind CSS dashboard system'),
-      )}&url=${encodeURIComponent(
-        'https://media.cssninja.io/content/products/logos/tairo-text-white.svg',
-      )}&previewUrl=${encodeURIComponent(
-        `https://tairo.cssninja.io${
-          route.meta.preview?.src || '/img/screens/documentation-hub.png'
-        }`,
-      )}`,
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://bashpty.com/img/og.png',
     },
   ],
+})
+
+useSeoMeta({
+  title: 'Bash Pty',
+  ogTitle: 'Bash Pty',
+  ogDescription:
+    'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+  description:
+    'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+  ogImage: 'https://bashpty.com/img/og.png',
+  twitterCard: 'summary_large_image',
 })
 </script>
 

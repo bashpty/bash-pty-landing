@@ -21,43 +21,64 @@ li {
 .marketing {
   margin-bottom: 2%;
 }
+
+@media (max-width: 1080px) {
+  .banner {
+    width: 100%;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>
 <template>
   <div class="dark:bg-muted-900 bg-white py-24">
-    <div class="mx-auto w-full max-w-7xl px-4">
+    <div class="mx-auto w-full max-w-7xl px-2">
       <div class="mb-10 max-w-2xl">
-        <BaseText class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider">Bash Pty</BaseText>
-        <BaseHeading as="h4" size="2xl" weight="light" lead="normal" class="text-muted-800 mx-auto mb-4 dark:text-white">
+        <BaseText size="3xl" class="text-primary-500 dark:text-muted-100 mx-auto mb-4">Bash Pty</BaseText>
+        <BaseHeading as="h4" size="2xl" weight="light" lead="normal"
+          class="text-muted-800 mx-auto mb-4 dark:text-white">
           Tu aliado tecnológico y de crecimiento
         </BaseHeading>
 
         <BaseParagraph id="pa1" name="pa1" size="lg" class="text-muted-500 dark:text-muted-100 mx-auto mb-4">
-          Ofrecemos una amplia gama de servicios para ayudarle a alcanzar sus
-          objetivos tecnológicos.
+          Ofrecemos una amplia gama de servicios 📲🎛 para ayudarle a alcanzar
+          sus objetivos tecnológicos ✅
         </BaseParagraph>
       </div>
-      <div class="mb-10 grid gap-y-16 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-16" id="row-1">
+
+      <div id="banner" class="banner" style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+        <img src="/img/machine.gif" style="width: 500px; height: 500" />
+        <img src="/img/coder.gif" style="width: 500px; height: 500" />
+      </div>
+
+      <div class="mb-10 grid grid-cols-1 gap-y-16 md:grid-cols-3 md:gap-x-8 md:gap-y-16" id="row-1">
         <div class="relative">
           <BaseCard rounded="lg" class="p-6" id="support" name="support">
-            <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
+            <BaseHeading as="h3" size="sm" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Soporte Técnico
+              Soporte Técnico 🖥 🛠
               <TairoSupportLogo class="text-primary-500 h-100 w-100" />
             </BaseHeading>
 
-            <BaseParagraph id="pa2" name="pa2" size="lg" lead="tight" class="text-muted-400">
+            <BaseParagraph id="pa2" name="pa2" size="sm" lead="tight" class="text-muted-400">
               <BaseList>
                 <BaseListItem title="Equipos"
                   subtitle="Mantenimiento preventivo. (Servidores, Torres, Laptops y redes computacionales)">
-                  <Icon name="ph:monitor-bold" class="text-info-500 size-10" />
+                  <Icon name="ph:monitor-bold" class="text-info-500 size-6" />
                 </BaseListItem>
                 <BaseListItem title="Cotización y compras"
                   subtitle="Gestionamos tus equipos e infraestructura tecnologica con los mejores proveedores del mercado.">
-                  <Icon name="ph:currency-dollar-bold" class="text-success-500 size-10" />
+                  <Icon name="ph:currency-dollar-bold" class="text-success-500 size-6" />
                 </BaseListItem>
 
                 <BaseListItem title="Licenciamiento de Software" subtitle="Contamos con gran variedad de licencias ">
-                  <Icon name="ph:credit-card-light" class="text-success-500 size-16" />
+                  <Icon name="ph:credit-card-light" class="text-success-500 size-6" />
                 </BaseListItem>
                 <BaseList class="text-muted-400 ps-8" style="font-size: small">
                   <li>Office 365 indvidual y empresarial</li>
@@ -74,7 +95,7 @@ li {
 
                 <BaseListItem title="Domitica e internet de las cosas"
                   subtitle="Domótica con Alexa, Google y otros agentes, instalaciones de interruptores, actuadores y más..">
-                  <Icon name="ph:drop-half-bottom-duotone" class="text-success-500 size-16" />
+                  <Icon name="ph:drop-half-bottom-duotone" class="text-success-500 size-6" />
                 </BaseListItem>
               </BaseList>
             </BaseParagraph>
@@ -84,11 +105,11 @@ li {
           <BaseCard rounded="lg" class="p-6" id="admin" name="admin">
             <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Administración de Datos y Analítica
+              Datos y Analítica 📊
               <TairoDataLogo class="text-primary-500 h-100 w-100 datalog" />
             </BaseHeading>
 
-            <BaseParagraph id="pa3" name="pa3" size="lg" lead="tight" class="text-muted-400">
+            <BaseParagraph id="pa3" name="pa3" size="sm" lead="tight" class="text-muted-400">
               <BaseList>
                 <BaseListItem title="Administración de Base de datos en nube y premisas"
                   subtitle="Experiencia con los gestores top del mercado">
@@ -111,7 +132,7 @@ li {
                 </BaseList>
                 <BaseListItem title="Integración y Automatización de datos"
                   subtitle="Implementaciones con Sql Server Integration Services,IBM InfoSphere DataStage, AWS Glue.">
-                  <Icon name="ph:intersect-bold" class="text-danger-500 size-10" />
+                  <Icon name="ph:intersect-bold" class="text-danger-500 size-6" />
                 </BaseListItem>
 
                 <BaseListItem title="Análisis, Minería, Visualización de Datos"
@@ -126,7 +147,7 @@ li {
           <BaseCard rounded="lg" class="p-6" id="develop" name="develop">
             <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Desarrollo de Software
+              Desarrollo de Software 💻
               <TairoProgramingLogo class="text-primary-500 h-100 w-100" />
             </BaseHeading>
 
@@ -135,31 +156,31 @@ li {
               <BaseList>
                 <BaseListItem title="Desarrollo de Software a medida"
                   subtitle="Implemnatmos software customizado en cualquier rugro comercial.">
-                  <Icon name="ph:terminal-duotone" class="text-info-500 size-10" />
+                  <Icon name="ph:terminal-duotone" class="text-info-500 size-6" />
                 </BaseListItem>
                 <BaseListItem title="Software de marca blanca"
                   subtitle="Customizamos software libre con el branding o marca propia.">
-                  <Icon name="ph:monitor-bold" class="text-info-500 size-10" />
+                  <Icon name="ph:monitor-bold" class="text-info-500 size-6" />
                 </BaseListItem>
                 <BaseListItem title="Automatización, versionamiento y despliegue en nube"
                   subtitle="Creamos pipelines de integración y despliegue continuo que cumpla con todo los estandares actuales de la industria.">
-                  <Icon name="ph:cloud-check-bold" class="text-info-500 size-10" />
+                  <Icon name="ph:cloud-check-bold" class="text-info-500 size-6" />
                 </BaseListItem>
                 <BaseListItem title="Asesorías de Arquitectura de Software"
                   subtitle="Realizamos asesoria de cualquier tipo de proyecto de software o transformación digital en la empresa.">
-                  <Icon name="ph:book-bookmark-bold" class="text-info-500 size-10" />
+                  <Icon name="ph:book-bookmark-bold" class="text-info-500 size-6" />
                 </BaseListItem>
               </BaseList>
             </BaseParagraph>
           </BaseCard>
         </div>
       </div>
-      <div class="mb-10 grid gap-y-16 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-16" id="row-2">
+      <div class="mb-10 grid gap-y-16 md:grid-cols-3 md:gap-x-8 md:gap-y-16" id="row-2">
         <div class="relative">
           <BaseCard rounded="lg" class="p-6" id="techemr" name="techemr">
             <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Tecnologías Emergentes
+              Tecnologías Emergentes 🌐
               <TairoBlockChainLogo class="text-primary-500 h-100 w-100 emerg" />
             </BaseHeading>
 
@@ -189,7 +210,7 @@ li {
           <BaseCard rounded="lg" class="p-6" id="growth" name="growth">
             <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Socio de Crecimiento
+              Socio de Crecimiento 🤝
               <img src="/img/contract.gif" class="h-100 w-100 grw" />
             </BaseHeading>
 
@@ -219,7 +240,7 @@ li {
           <BaseCard rounded="lg" class="p-6" id="marketing" name="marketing">
             <BaseHeading as="h3" size="lg" weight="bold" lead="tight"
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
-              Marketing Digital
+              Marketing Digital 📣📣
               <TairoMarketingLogo class="text-primary-500 h-70 w-70 marketing" />
             </BaseHeading>
 
@@ -246,91 +267,106 @@ li {
           </BaseCard>
         </div>
       </div>
+      <div style="
+          width: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+        ">
+        <BaseText size="2xl" class="text-primary-500 dark:text-muted-100 mx-auto mb-4">Ultimos clientes...</BaseText>
+      </div>
+      <div style="
+          width: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+        ">
+        <ClientsCarusel :slides-to-show="4" :slides="clients" />
+      </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+const clients = [
+  {
+    icon: '/img/fyt.png',
+    title: 'Fund Your Trades',
+  },
+  {
+    icon: '/img/luckyraffle.png',
+    title: 'Lucky Raffle',
+  },
+  {
+    icon: '/img/tasmania.png',
+    title: 'Sabores de Tasmania',
+  },
+]
+
 const topics = [
   {
     icon: '/img/stacks/cplus.svg',
     title: 'Cplus',
-
   },
   {
     icon: '/img/stacks/csharp.svg',
     title: 'C-sharp',
-
   },
   {
     icon: '/img/stacks/java.svg',
     title: 'Java',
-
   },
   {
     icon: '/img/stacks/python.svg',
     title: 'Python',
-
   },
   {
     icon: '/img/stacks/github.svg',
     title: 'Github',
-
   },
   {
     icon: '/img/stacks/framework/azure.svg',
     title: 'Azure',
-
   },
   {
     icon: '/img/stacks/framework/aws.svg',
     title: 'AWS',
-
   },
   {
     icon: '/img/stacks/framework/docker.svg',
     title: 'Docker',
-
   },
   {
     icon: '/img/stacks/framework/k8s.svg',
     title: 'Kubernetes',
-
   },
   {
     icon: '/img/stacks/framework/terraform.svg',
     title: 'Terraform',
-
   },
 
   {
     icon: '/img/stacks/language/javascript.svg',
     title: 'Javascript',
-
   },
   {
     icon: '/img/stacks/language/typescript.svg',
     title: 'Typescript',
-
   },
   {
     icon: '/img/stacks/nodejs.svg',
     title: 'Nodejs',
-
   },
   {
     icon: '/img/stacks/nuxt.svg',
     title: 'Nuxt',
-
   },
   {
     icon: '/img/stacks/vuejs.svg',
     title: 'Vuejs',
-
   },
   {
     icon: '/img/stacks/html5.svg',
     title: 'Html',
-
   },
 ]
 </script>
