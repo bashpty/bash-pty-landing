@@ -4,7 +4,7 @@ export default defineAppConfig({
     defaultShapes: {},
   },
   tairo: {
-    title: 'Your best tech partner',
+    title: 'Bash Pty',
     sidebar: {
       toolbar: {
         showNavBurger: true,

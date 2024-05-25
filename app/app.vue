@@ -9,7 +9,6 @@ useHead({
       ? `${titleChunk} - ${app.tairo.title}`
       : `${app.tairo.title}`
   },
-
   htmlAttrs: {
     lang: 'en',
     dir: 'ltr',
@@ -26,16 +25,11 @@ useHead({
     {
       name: 'description',
       content:
-        'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+        'Desarrollo Web a medida y aplicaciones de alta calidad 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
     },
     {
       name: 'twitter:card',
       content: 'summary_large_image',
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: 'https://bashpty.com/img/og.png',
     },
   ],
 })
@@ -44,9 +38,9 @@ useSeoMeta({
   title: 'Bash Pty',
   ogTitle: 'Bash Pty',
   ogDescription:
-    'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+    'Desarrollo Web a medida y aplicaciones de alta calidad 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
   description:
-    'Desarrollo Web a medida y aplicaciones de alta calidad 🇵🇦 -> 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
+    'Desarrollo Web a medida y aplicaciones de alta calidad 🌎, Empujamos tu negocio hacia nuevo metaverso de la Tecnología | Agenda con nosotros!',
   ogImage: 'https://bashpty.com/img/og.png',
   twitterCard: 'summary_large_image',
 })
@@ -54,9 +48,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <AppSearch />
     <AppLayoutSwitcher />
-    <VueAxePopup />
     <NuxtLayout>
       <NuxtLoadingIndicator color="var(--color-primary-500)" />
       <NuxtPage />
