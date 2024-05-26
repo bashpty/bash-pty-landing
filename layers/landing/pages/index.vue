@@ -4,7 +4,7 @@ definePageMeta({
   layout: 'landing',
   preview: {
     title: 'Bash Pty',
-    description: '',
+    description: 'Tu mejor elección tecnológica 🖥️',
     order: 1,
   },
 })
