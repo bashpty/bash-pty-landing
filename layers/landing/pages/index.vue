@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Tu mejor elección tecnológica 🖥️',
+  title: '| Tu mejor elección tecnológica 🖥️',
   layout: 'landing',
 })
 </script>
