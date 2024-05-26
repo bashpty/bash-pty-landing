@@ -8,14 +8,34 @@ export default defineNuxtConfig({
     '../layers/tairo-layout-topnav',
     '../layers/tairo',
   ],
-  modules: ['nuxt-swiper'],
+  modules: ['nuxt-swiper', 'nuxt-gtag'],
   css: [
     '~/assets/css/colors.css',
     '@fontsource-variable/fira-code/index.css',
     '@fontsource-variable/inter/index.css',
     '@fontsource-variable/karla/index.css',
   ],
-
+  gtag: {
+    enabled: true,
+    id: 'G-DS3DKN0W0F',
+    config: {
+      page_title: 'Bash Pty',
+    },
+    initCommands: [
+      // Setup up consent mode
+      [
+        'consent',
+        'default',
+        {
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+          wait_for_update: 500,
+        },
+      ],
+    ],
+  },
   experimental: {
     watcher: 'chokidar-granular',
 

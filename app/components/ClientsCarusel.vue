@@ -48,7 +48,7 @@ const props = withDefaults(defineProps<CarouselProps>(), {
           <BaseCard shape="curved" :name="'stack_' + index"
             class="text-muted-400 hover:border-primary-500 hover:text-primary-500 dark:hover:border-primary-500 flex min-w-[100px] items-center justify-center px-2 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div class="text-center">
-              <img :src="slide.icon" class="h-50 w-50 mx-auto" />
+              <img :src="slide.icon" class="mx-auto h-20 w-20" />
               <BaseHeading size="xs" weight="medium" lead="tight" class="text-muted-800 dark:text-white">
                 {{ slide.title }}
               </BaseHeading>

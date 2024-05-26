@@ -29,6 +29,7 @@
     "magic-string": "0.30.3",
     "mapbox-gl": "2.15.0",
     "nuxt": "3.6.5",
+    "nuxt-gtag": "^2.0.6",
     "nuxt-security": "^1.2.2",
     "nuxt-swiper": "1.2.2",
     "rehype-external-links": "3.0.0",

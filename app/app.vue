@@ -6,7 +6,7 @@ useHead({
   title: () => route.meta?.title ?? '',
   titleTemplate: (titleChunk) => {
     return titleChunk
-      ? `${titleChunk} - ${app.tairo.title}`
+      ? `${titleChunk} | ${app.tairo.title}`
       : `${app.tairo.title}`
   },
   htmlAttrs: {
@@ -48,7 +48,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <AppLayoutSwitcher />
     <NuxtLayout>
       <NuxtLoadingIndicator color="var(--color-primary-500)" />
       <NuxtPage />
