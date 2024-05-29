@@ -149,6 +149,12 @@ li {
               class="text-muted-800 center mb-2 text-center align-middle dark:text-white">
               Desarrollo de Software 💻
               <TairoProgramingLogo class="text-primary-500 h-100 w-100" />
+              <BaseButtonAction to="/services/website" rounded="md" color="success" class="m-2 text-xs">
+                Cotizar un sitios web
+              </BaseButtonAction>
+              <BaseButtonAction to="/services/maintenance" rounded="md" color="success" class="m-2 text-xs">
+                Planes de mantenimiento
+              </BaseButtonAction>
             </BaseHeading>
 
             <BaseParagraph id="pa4" name="pa4" size="sm" lead="tight" class="text-muted-400">
