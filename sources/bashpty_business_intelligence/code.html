@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business Intelligence - BashPty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#bed0ff",
+                        "on-secondary-fixed-variant": "#00522a",
+                        "surface-container-lowest": "#0e0e10",
+                        "surface-container-high": "#2a2a2c",
+                        "surface": "#131315",
+                        "on-secondary-fixed": "#00210d",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "secondary-container": "#02c16a",
+                        "on-tertiary-container": "#cbccff",
+                        "on-surface": "#e5e1e4",
+                        "on-surface-variant": "#c3c6d4",
+                        "secondary": "#43e186",
+                        "secondary-fixed": "#65fe9f",
+                        "surface-container-highest": "#353437",
+                        "success-vibrant": "#10B981",
+                        "on-secondary-container": "#004824",
+                        "primary": "#afc6ff",
+                        "surface-container": "#201f22",
+                        "zinc-400": "#A1A1AA",
+                        "surface-bright": "#39393b",
+                        "primary-container": "#1d55b2",
+                        "on-secondary": "#00391b",
+                        "on-primary-fixed-variant": "#004299",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#313032",
+                        "surface-dim": "#131315",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#afc6ff",
+                        "outline-variant": "#434752",
+                        "inverse-primary": "#255bb8",
+                        "tertiary-container": "#4344d1",
+                        "surface-container-low": "#1c1b1d",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "background": "#131315",
+                        "on-background": "#e5e1e4",
+                        "on-primary-fixed": "#001944",
+                        "zinc-800": "#27272A",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#07006c",
+                        "warning-amber": "#F59E0B",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e1e0ff",
+                        "outline": "#8d909e",
+                        "slate-900": "#0F172A",
+                        "tertiary": "#c0c1ff",
+                        "surface-variant": "#353437",
+                        "on-primary": "#002d6d",
+                        "on-tertiary": "#1000a9",
+                        "secondary-fixed-dim": "#43e186",
+                        "surface-tint": "#afc6ff",
+                        "inverse-surface": "#e5e1e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "section-padding": "5rem",
+                        "margin-desktop": "2rem",
+                        "bento-gap": "1rem",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["ui-monospace"],
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(39, 39, 42, 0.3) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(39, 39, 42, 0.3) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-16">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-zinc-800 shadow-sm">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="deployed_code">deployed_code</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">BashPty</span>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Automation</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Intelligence</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Custom Stack</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Case Studies</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-4 py-2 text-on-surface border border-zinc-800 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors">Contact</button>
+<button class="px-4 py-2 bg-primary-container text-white rounded-lg font-label-md text-label-md hover:scale-95 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-gutter py-section-padding md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="relative rounded-2xl overflow-hidden bg-surface-container-lowest border border-zinc-800 mb-section-padding">
+<div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent"></div>
+<div class="relative z-10 px-8 py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="analytics">analytics</span>
+                        Data Sovereignty
+                    </div>
+<h1 class="font-display-lg text-display-lg text-on-surface md:w-4/5">Open-Source Business Intelligence</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant md:w-3/4">
+                        Break free from vendor lock-in. We deploy, customize, and embed powerful open-source BI tools like Metabase and Superset into your ecosystem.
+                    </p>
+<div class="pt-4 flex gap-4">
+<button class="px-6 py-3 bg-primary-container text-white rounded-lg font-label-md text-label-md hover:scale-95 transition-transform flex items-center gap-2">
+                            Deploy Now <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full md:w-auto h-64 md:h-96 rounded-xl overflow-hidden border border-zinc-800 relative">
+<img class="object-cover w-full h-full" data-alt="A sophisticated, dark-themed business intelligence dashboard displayed on a high-resolution screen. The UI features sleek bento-box style widgets with vibrant blue and green data visualizations, line charts, and metric counters against a deep charcoal background. Technical, modern SaaS aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHOX1vDJsJKU2VF1zmdpxNN63Q1JaXIvskkPRx9e9GSt-PLIpPP5_IHKBSYip51WwAOP0q1FyQiF6kTkJV56HF-GVUhKRgIZheq52sefbUiSYv7ErWQ7W8-TQRzJGza1RGi_jXQZ_R-0KFIyQFKNZ8UsLfSE7qHPUKejNFPEAT7KMpmXajUVwqVNPYhkqnSDTx1O4nr7F8o1QCthLuBc96iDUV9ASPfr2CZiEqHOs7mwJuiCwJXe6GkwwrAfbDGDrpcwDkv5SMQIA"/>
+</div>
+</div>
+</section>
+<!-- Problem / Solution Bento -->
+<section class="mb-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-bento-gap">
+<!-- Problem -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-8 space-y-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-error" data-icon="hub">hub</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-error-container/20 border border-error/30 flex items-center justify-center text-error mb-6">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Data Silo Dilemma</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        SaaS companies often struggle with fragmented data sources and exorbitant licensing fees for proprietary BI tools. This creates bottlenecks in reporting and limits customer visibility into their own metrics.
+                    </p>
+</div>
+<!-- Solution -->
+<div class="bg-primary-container/10 border border-primary/30 rounded-xl p-8 space-y-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary" data-icon="database">database</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Integrated Open-Source</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We implement centralized architectures using tools like Metabase and Apache Superset. Enjoy a single source of truth, unlimited users, and seamless embedding into your existing applications.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Service Offerings -->
+<section class="mb-section-padding space-y-8">
+<div class="space-y-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Core Capabilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored deployment strategies for modern data stacks.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap">
+<!-- Service 1 -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-6 hover:bg-surface-variant transition-colors flex flex-col h-full">
+<div class="mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="bar_chart">bar_chart</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Self-Service BI (Metabase)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">
+                        Empower your team to explore data without writing SQL. We configure robust Metabase instances connected directly to your data warehouses.
+                    </p>
+<div class="mt-6 pt-4 border-t border-zinc-800">
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">PostgreSQL</span>
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">Snowflake</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-6 hover:bg-surface-variant transition-colors flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-4 right-4 px-2 py-1 bg-secondary-container/20 text-secondary border border-secondary/30 rounded font-label-md text-[10px] uppercase tracking-wide">High Demand</div>
+<div class="mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="web">web</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Embedded Analytics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">
+                        Inject powerful, interactive dashboards directly into your SaaS product's frontend, providing white-labeled value to your end users.
+                    </p>
+<div class="mt-6 pt-4 border-t border-zinc-800 flex gap-2">
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">React</span>
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">Vue.js</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-6 hover:bg-surface-variant transition-colors flex flex-col h-full">
+<div class="mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="speed">speed</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Real-Time Monitoring</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">
+                        Deploy Grafana alongside Prometheus or InfluxDB for sub-second telemetry visualization, perfect for IoT or high-frequency transactional systems.
+                    </p>
+<div class="mt-6 pt-4 border-t border-zinc-800">
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">Grafana</span>
+<span class="inline-block px-2 py-1 bg-surface-bright text-on-surface-variant font-code-sm text-code-sm rounded">IoT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Specs & Security -->
+<section class="bg-surface-container-lowest border border-zinc-800 rounded-xl p-8 md:p-12">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/3 space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Technical Specifications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Built for secure, scalable integration into modern web architectures.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-bright rounded border border-zinc-800 text-on-surface">
+<span class="material-symbols-outlined" data-icon="api">api</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">Frontend Agnostic</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Seamless iframe or SDK injection for React, Vue, Svelte, and native HTML environments.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-bright rounded border border-zinc-800 text-on-surface">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">Row-Level Security</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Utilize secure JWT signing to enforce multi-tenant data isolation within embedded views.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-bright rounded border border-zinc-800 text-on-surface">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">Infrastructure as Code</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deployments managed via Terraform and Docker for reproducible, scalable environments.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-bright rounded border border-zinc-800 text-on-surface">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">Continuous Sync</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated data pipeline integration ensuring dashboards reflect near real-time state.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface border-t border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="text-headline-md font-headline-md font-bold text-on-surface block">BashPty</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 BashPty. Data-Driven Automation &amp; Integrated Growth.</p>
+</div>
+<div class="flex flex-col space-y-2">
+<span class="font-label-md text-label-md text-on-surface mb-2 uppercase tracking-wider">Services</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Automation</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Business Intelligence</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Custom Software</a>
+</div>
+<div class="flex flex-col space-y-2">
+<span class="font-label-md text-label-md text-on-surface mb-2 uppercase tracking-wider">Legal</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div>
+<!-- Empty column for grid balance, or could add social links -->
+</div>
+</div>
+</footer>
+</body></html>

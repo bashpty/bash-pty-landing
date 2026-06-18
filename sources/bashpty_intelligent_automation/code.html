@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Intelligent Workflow Automation | BashPty</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#bed0ff",
+                        "on-secondary-fixed-variant": "#00522a",
+                        "surface-container-lowest": "#0e0e10",
+                        "surface-container-high": "#2a2a2c",
+                        "surface": "#131315",
+                        "on-secondary-fixed": "#00210d",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "secondary-container": "#02c16a",
+                        "on-tertiary-container": "#cbccff",
+                        "on-surface": "#e5e1e4",
+                        "on-surface-variant": "#c3c6d4",
+                        "secondary": "#43e186",
+                        "secondary-fixed": "#65fe9f",
+                        "surface-container-highest": "#353437",
+                        "success-vibrant": "#10B981",
+                        "on-secondary-container": "#004824",
+                        "primary": "#afc6ff",
+                        "surface-container": "#201f22",
+                        "zinc-400": "#A1A1AA",
+                        "surface-bright": "#39393b",
+                        "primary-container": "#1d55b2",
+                        "on-secondary": "#00391b",
+                        "on-primary-fixed-variant": "#004299",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#313032",
+                        "surface-dim": "#131315",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#afc6ff",
+                        "outline-variant": "#434752",
+                        "inverse-primary": "#255bb8",
+                        "tertiary-container": "#4344d1",
+                        "surface-container-low": "#1c1b1d",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "background": "#131315",
+                        "on-background": "#e5e1e4",
+                        "on-primary-fixed": "#001944",
+                        "zinc-800": "#27272A",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#07006c",
+                        "warning-amber": "#F59E0B",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e1e0ff",
+                        "outline": "#8d909e",
+                        "slate-900": "#0F172A",
+                        "tertiary": "#c0c1ff",
+                        "surface-variant": "#353437",
+                        "on-primary": "#002d6d",
+                        "on-tertiary": "#1000a9",
+                        "secondary-fixed-dim": "#43e186",
+                        "surface-tint": "#afc6ff",
+                        "inverse-surface": "#e5e1e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "section-padding": "5rem",
+                        "margin-desktop": "2rem",
+                        "bento-gap": "1rem",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["ui-monospace"],
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-white">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface/80 backdrop-blur-md shadow-sm fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto border-b border-zinc-800">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="hub">hub</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">BashPty</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:bg-primary-container/10" href="#">Automation</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:bg-primary-container/10" href="#">Intelligence</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:bg-primary-container/10" href="#">Custom Stack</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:bg-primary-container/10" href="#">Case Studies</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Contact</button>
+<button class="bg-primary-container text-white px-4 py-2 rounded-lg font-label-md text-label-md hover:scale-95 transition-transform active:scale-95">Get Started</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-16 px-gutter max-w-container-max mx-auto w-full flex flex-col gap-12">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-8 py-12 md:py-20 border-b border-zinc-800 pb-16">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-success-vibrant/10 border border-success-vibrant/20 px-3 py-1 rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-success-vibrant animate-pulse"></span>
+<span class="font-label-md text-label-md text-success-vibrant uppercase">n8n Preferred Partner</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface">Intelligent Workflow Automation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Construct a resilient digital nervous system. We engineer custom, self-hosted n8n infrastructure to eliminate vendor lock-in, bypass per-task pricing, and secure your data sovereignty.
+                </p>
+<div class="flex gap-4 mt-4">
+<button class="bg-primary-container text-white px-6 py-3 rounded-lg font-label-md text-label-md hover:scale-95 transition-transform flex items-center gap-2">
+                        Start Architecting <span class="material-symbols-outlined" data-icon="arrow_right">arrow_right</span>
+</button>
+<button class="bg-transparent border border-zinc-800 text-on-surface px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-zinc-400" data-icon="terminal">terminal</span> View Docs
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="aspect-video rounded-xl border border-zinc-800 bg-surface-container-low overflow-hidden relative shadow-[0_0_40px_rgba(29,85,178,0.1)]">
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-screen" data-alt="A highly abstract, dark-mode 3D visualization of a digital network or 'nervous system'. Glowing neon blue and green nodes are connected by intricate, glowing data lines over a deep black background. The aesthetic is extremely modern, industrial, and cybernetic, representing robust data flow and server architecture in a high-tech corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAct1j8vqKP6Bj_ri0d9DkjEKWHbvDMnumZy4rBxsnJ3MIki2tbs267YxCId-KRoMK92iUgnaWnnPy4gQ5XD4EOPoqZDf9mi4d24mCsax_fakyzJ6HgjyKt1rtRdxhtxzITy-R1XF1Bjt8iolbqwocsnZuT-1wWNuxHxdbN5VwrQ3XVY1GpVjX6mDFBhjl86fhSJDn2JDp1vgydqPi-t6z6iY0xgN3bEA1JhpimBDALOiYxpVOH5w20zAvru0L2jUgSdy_8YhGSU5o"/>
+</div>
+</div>
+</section>
+<!-- Problem / Solution Bento -->
+<section class="flex flex-col gap-6">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">The Paradigm Shift</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-bento-gap">
+<!-- The Problem -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-8 flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-error opacity-50 text-4xl group-hover:scale-110 transition-transform" data-icon="warning">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-error-container">Escaping the Zapier Trap</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Traditional SaaS automation platforms penalize scale. Per-task pricing models transform operational growth into a financial liability, while cloud-only execution compromises data security and creates rigid silos.
+                    </p>
+<ul class="flex flex-col gap-2 mt-4">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-zinc-400"><span class="material-symbols-outlined text-error text-sm" data-icon="close">close</span> Exponential cost scaling</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-zinc-400"><span class="material-symbols-outlined text-error text-sm" data-icon="close">close</span> Third-party data exposure</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-zinc-400"><span class="material-symbols-outlined text-error text-sm" data-icon="close">close</span> Limited complex branching logic</li>
+</ul>
+</div>
+<!-- The Solution -->
+<div class="bg-surface-container-low border border-zinc-800 rounded-xl p-8 flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-success-vibrant opacity-50 text-4xl group-hover:scale-110 transition-transform" data-icon="shield_lock">shield_lock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Absolute Data Sovereignty</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We deploy self-hosted n8n environments inside your infrastructure. Execute millions of tasks with zero marginal cost while keeping sensitive payload data completely within your own network perimeter.
+                    </p>
+<ul class="flex flex-col gap-2 mt-4">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-success-vibrant text-sm" data-icon="check">check</span> Flat-rate infrastructure costs</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-success-vibrant text-sm" data-icon="check">check</span> On-premise or VPC deployment</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="material-symbols-outlined text-success-vibrant text-sm" data-icon="check">check</span> Pro-code extensibility</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Deep Dives Bento Grid -->
+<section class="flex flex-col gap-6 pt-8 border-t border-zinc-800">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Core Capabilities</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap auto-rows-[minmax(280px,auto)]">
+<!-- Custom Workflow Development (Odoo) - Wide Card -->
+<div class="md:col-span-8 bg-surface-container-low border border-zinc-800 rounded-xl p-8 flex flex-col justify-between group overflow-hidden relative">
+<div class="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[200px]" data-icon="account_tree">account_tree</span>
+</div>
+<div class="flex flex-col gap-4 relative z-10 max-w-xl">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 border border-primary-container/30 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined" data-icon="integration_instructions">integration_instructions</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Custom Workflow Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Deep, bi-directional integration with heavy-duty platforms like Odoo ERP &amp; CRM. We map complex business logic into reliable, error-handled n8n workflows that automate critical path operations—from lead routing to inventory synchronization.
+                        </p>
+</div>
+<div class="mt-8 flex gap-2 flex-wrap relative z-10">
+<span class="px-3 py-1 bg-surface border border-zinc-800 rounded-full font-code-sm text-code-sm text-zinc-400">Odoo</span>
+<span class="px-3 py-1 bg-surface border border-zinc-800 rounded-full font-code-sm text-code-sm text-zinc-400">Salesforce</span>
+<span class="px-3 py-1 bg-surface border border-zinc-800 rounded-full font-code-sm text-code-sm text-zinc-400">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface border border-zinc-800 rounded-full font-code-sm text-code-sm text-zinc-400">REST APIs</span>
+</div>
+</div>
+<!-- AI-Powered Agents (MCP) - Tall/Square Card -->
+<div class="md:col-span-4 bg-surface-container-low border border-zinc-800 rounded-xl p-8 flex flex-col justify-between group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/5 to-transparent"></div>
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 border border-secondary-container/30 flex items-center justify-center text-secondary-container mb-2">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</div>
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary/20">Beta</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">AI-Powered Agents (Custom MCP)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Elevate static automations with reasoning. We build custom Model Context Protocol (MCP) servers, allowing LLMs to securely interface with your n8n workflows to make dynamic decisions, parse unstructured data, and act autonomously.
+                        </p>
+</div>
+</div>
+<!-- Automation Stack Consulting - Full Width Footer-like Card -->
+<div class="md:col-span-12 bg-[#0e0e10] border border-zinc-800 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute left-0 top-0 w-1 h-full bg-primary-container"></div>
+<div class="flex flex-col gap-2 max-w-2xl">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span> 
+                            Automation Stack Consulting
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Not sure where to start? We audit your existing processes, map out inefficiencies, and deliver a comprehensive architectural blueprint for your future automation stack. Ensure high availability, redundancy, and scalability from day one.
+                        </p>
+</div>
+<div class="flex-shrink-0">
+<button class="bg-surface border border-zinc-800 text-on-surface px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors hover:text-primary">
+                            Request an Audit
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="py-12 mt-8 border-t border-zinc-800 flex justify-center">
+<div class="max-w-3xl text-center flex flex-col items-center gap-6">
+<span class="material-symbols-outlined text-zinc-600 text-5xl" data-icon="format_quote">format_quote</span>
+<p class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface italic leading-relaxed">
+                    "BashPty migrated our entire operational stack off Zapier to a self-hosted n8n instance. Not only did we achieve true data sovereignty, but our automation costs dropped by 80% while our processing speed doubled. It's an industrial-grade solution."
+                </p>
+<div class="flex items-center gap-4 mt-4">
+<div class="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center overflow-hidden border border-zinc-700">
+<span class="material-symbols-outlined text-zinc-400" data-icon="person">person</span>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">John Doe</p>
+<p class="font-body-sm text-body-sm text-zinc-400">CEO, Example Corp</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface border-t border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap py-section-padding px-gutter max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="hub">hub</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">BashPty</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    © 2024 BashPty. Data-Driven Automation &amp; Integrated Growth.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Services</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Automation</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Business Intelligence</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Custom Software</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Legal</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>
