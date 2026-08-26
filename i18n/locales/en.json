@@ -25,7 +25,9 @@
             "title": "Bash Pty: Your Partner for Data-Driven Automation & Integrated Growth.",
             "subtitle": "We build and manage your complete tech stack—from resilient IT and custom software to intelligent automation and BI dashboards.",
             "exploreServices": "Explore Our Services",
-            "scheduleAudit": "Schedule Your Free Automation Audit"
+            "scheduleAudit": "Schedule Your Free Automation Audit",
+            "accelerate": "Accelerate Your Stack",
+            "viewCaseStudies": "View Case Studies"
         },
         "bento": {
             "customSoftware": {
@@ -51,11 +53,24 @@
             "web3Lab": {
                 "title": "Emerging Tech & Web3 Lab",
                 "description": "Your R&D partner for DeFi, KYC, and IoT projects."
-            }
+            },
+            "sectionTitle": "Core Architecture",
+            "sectionSubtitle": "Modular solutions designed for resilience, clarity, and exponential scale."
         }
     },
     "trustSignals": {
         "trustedBy": "Trusted by Panama's Leading Businesses:"
+    },
+    "caseStudyCard": {
+        "badge": "Success Metric",
+        "title": "67% reduction in manual processing",
+        "description": "See how we engineered an automated logistics pipeline that completely bypassed legacy data entry protocols, resulting in unprecedented operational velocity.",
+        "readMore": "Read Full Case Study"
+    },
+    "heroCta": {
+        "title": "Ready to Accelerate?",
+        "description": "Deploy intelligent automation and gain total visibility into your operational metrics. Connect with our engineering team today.",
+        "button": "Initialize Deployment"
     },
     "caseStudyHighlight": {
         "title": "Case Study Highlight",

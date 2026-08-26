@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BashPty | Data-Driven Automation &amp; Integrated Growth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004299",
+                      "secondary": "#43e186",
+                      "border-subtle": "#27272A",
+                      "inverse-on-surface": "#313032",
+                      "surface-variant": "#353437",
+                      "tertiary": "#c0c1ff",
+                      "surface-dim": "#131315",
+                      "tertiary-container": "#4344d1",
+                      "on-tertiary-container": "#cbccff",
+                      "surface-container-lowest": "#0e0e10",
+                      "tertiary-fixed-dim": "#c0c1ff",
+                      "on-secondary-container": "#004824",
+                      "surface-container-low": "#1c1b1d",
+                      "secondary-container": "#02c16a",
+                      "primary": "#afc6ff",
+                      "secondary-fixed": "#65fe9f",
+                      "outline-variant": "#434752",
+                      "surface-container-high": "#2a2a2c",
+                      "inverse-primary": "#255bb8",
+                      "inverse-surface": "#e5e1e4",
+                      "text-muted": "#A1A1AA",
+                      "on-secondary-fixed": "#00210d",
+                      "surface": "#131315",
+                      "surface-elevated": "#18181B",
+                      "primary-fixed": "#d9e2ff",
+                      "tertiary-fixed": "#e1e0ff",
+                      "primary-fixed-dim": "#afc6ff",
+                      "on-tertiary-fixed": "#07006c",
+                      "primary-container": "#1d55b2",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#afc6ff",
+                      "on-background": "#e5e1e4",
+                      "on-tertiary": "#1000a9",
+                      "surface-container-highest": "#353437",
+                      "background": "#131315",
+                      "secondary-fixed-dim": "#43e186",
+                      "on-secondary": "#00391b",
+                      "on-error-container": "#ffdad6",
+                      "on-primary": "#002d6d",
+                      "on-surface": "#e5e1e4",
+                      "on-secondary-fixed-variant": "#00522a",
+                      "on-tertiary-fixed-variant": "#2f2ebe",
+                      "on-surface-variant": "#c3c6d4",
+                      "outline": "#8d909e",
+                      "on-primary-fixed": "#001944",
+                      "surface-container": "#201f22",
+                      "error-container": "#93000a",
+                      "surface-card": "#111114",
+                      "on-primary-container": "#bed0ff",
+                      "on-error": "#690005",
+                      "surface-bright": "#39393b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2rem",
+                      "gutter": "1.5rem",
+                      "section-padding": "5rem",
+                      "bento-gap": "1rem"
+              },
+              "fontFamily": {
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Geist"],
+                      "headline-lg-mobile": ["Geist"],
+                      "display-lg": ["Geist"],
+                      "code-sm": ["JetBrains Mono"],
+                      "headline-md": ["Geist"]
+              },
+              "fontSize": {
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "code-sm": ["13px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131315;
+            color: #e5e1e4;
+        }
+        .bento-item {
+            background-color: #111114;
+            border: 1px solid #27272A;
+            transition: all 0.2s ease;
+        }
+        .bento-item:hover {
+            border-color: #434752;
+            background-color: #18181B;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(29, 85, 178, 0.5);
+        }
+        .grid-bg {
+            background-image: linear-gradient(to right, #27272A 1px, transparent 1px),
+                              linear-gradient(to bottom, #27272A 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky bg-background/95 dark:bg-background/95 backdrop-blur-md z-50 flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto border-b border-border-subtle dark:border-border-subtle">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">BashPty</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-primary dark:text-primary border-b-2 border-primary pb-1 scale-95 duration-100 hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Automation</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Intelligence</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Custom Stack</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Case Studies</a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+<button class="bg-primary-container text-white px-4 py-2 rounded font-label-md text-label-md hover:bg-inverse-primary transition-colors glow-button active:scale-95 duration-100">Schedule Strategy Call</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center">
+<div class="absolute inset-0 grid-bg opacity-30 -z-10 pointer-events-none"></div>
+<div class="w-24 h-24 mb-8 rounded-xl bg-surface-card border border-border-subtle p-4 shadow-[0_0_30px_rgba(29,85,178,0.2)] flex items-center justify-center">
+<img alt="BashPty Logo" class="w-full h-full object-contain filter invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRUudCXdmrAU1to7QHOJqC3Z1gDojjTGYOoesW2Xxpfq6ydQFLUIpu0OChbM3IKV0nqZP6QF4dzMbuAm9BNmbhFCw9aR8kTeobLrERgYTHEhX57e1rRmzyTrR4VGlGPZIZadINs4ZX5qywG6FyxkCaC4znMtxO2LjJ6fSMdhfyYGLPggNHXni46HNO2odkB7VPH7z9wPjRUJ5sUU51NMqw6Rvt3mVkjm3b-ce2mNxMWMSt0Si4xRN5EbgSceMOJRYH8A"/>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl mb-6">
+                Your Partner for Data-Driven Automation &amp; Integrated Growth.
+            </h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-10">
+                We build and manage your complete tech stack—from resilient IT and custom software to intelligent automation and BI dashboards.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-white px-6 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary transition-colors glow-button active:scale-95 duration-100">Explore Our Services</button>
+<button class="bg-transparent text-on-surface border border-border-subtle px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-elevated hover:border-outline-variant transition-colors active:scale-95 duration-100">Schedule Your Free Automation Audit</button>
+</div>
+<div class="mt-20 pt-10 border-t border-border-subtle w-full max-w-3xl">
+<p class="font-label-md text-label-md text-text-muted uppercase tracking-widest mb-6">Trusted by Panama's Leading Businesses</p>
+<div class="flex justify-center gap-8 md:gap-16 opacity-50 grayscale">
+<span class="material-symbols-outlined text-4xl" data-icon="domain">domain</span>
+<span class="material-symbols-outlined text-4xl" data-icon="account_balance">account_balance</span>
+<span class="material-symbols-outlined text-4xl" data-icon="factory">factory</span>
+<span class="material-symbols-outlined text-4xl" data-icon="local_shipping">local_shipping</span>
+<span class="material-symbols-outlined text-4xl" data-icon="storefront">storefront</span>
+</div>
+</div>
+</section>
+<!-- Core Architecture Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-border-subtle relative">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Core Architecture</h2>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl">Modular solutions designed for resilience, clarity, and exponential scale.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-bento-gap">
+<!-- Custom Software -->
+<div class="bento-item rounded-xl p-6 lg:col-span-2 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl -mr-20 -mt-20 transition-opacity group-hover:opacity-100 opacity-50"></div>
+<div>
+<div class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="code_blocks">code_blocks</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Custom Software</h3>
+<p class="font-body-sm text-body-sm text-text-muted mb-6 max-w-md">Bespoke applications engineered from the ground up to solve complex enterprise operational bottlenecks.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-elevated border border-border-subtle rounded text-[10px] font-code-sm text-text-muted uppercase">React</span>
+<span class="px-2 py-1 bg-surface-elevated border border-border-subtle rounded text-[10px] font-code-sm text-text-muted uppercase">Node.js</span>
+<span class="px-2 py-1 bg-surface-elevated border border-border-subtle rounded text-[10px] font-code-sm text-text-muted uppercase">PostgreSQL</span>
+</div>
+</div>
+<!-- Workflow Automation -->
+<div class="bento-item rounded-xl p-6 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined" data-icon="schema">schema</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Workflow Automation</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Eliminate manual overhead by connecting siloed systems into seamless, self-executing data pipelines.</p>
+</div>
+</div>
+<!-- Business Intelligence -->
+<div class="bento-item rounded-xl p-6">
+<div class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Business Intelligence</h3>
+<p class="font-body-sm text-body-sm text-text-muted mb-4">Transform raw data streams into actionable executive dashboards with surgical precision and clarity.</p>
+<div class="h-24 w-full bg-surface-elevated border border-border-subtle rounded flex items-end p-2 gap-1 overflow-hidden opacity-70">
+<div class="w-1/6 bg-tertiary/20 h-[30%] rounded-t"></div>
+<div class="w-1/6 bg-tertiary/40 h-[50%] rounded-t"></div>
+<div class="w-1/6 bg-tertiary/60 h-[40%] rounded-t"></div>
+<div class="w-1/6 bg-tertiary/80 h-[70%] rounded-t"></div>
+<div class="w-1/6 bg-tertiary h-[90%] rounded-t shadow-[0_0_10px_rgba(192,193,255,0.5)]"></div>
+<div class="w-1/6 bg-tertiary/50 h-[60%] rounded-t"></div>
+</div>
+</div>
+<!-- Managed IT -->
+<div class="bento-item rounded-xl p-6">
+<div class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="dns">dns</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Managed IT</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Industrial-grade infrastructure management ensuring 99.99% uptime and uncompromised data sovereignty.</p>
+</div>
+<!-- Strategic Growth -->
+<div class="bento-item rounded-xl p-6 lg:col-span-2 flex flex-col md:flex-row gap-6 items-center">
+<div class="flex-1">
+<div class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Strategic Growth</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Data-backed consulting designed to identify untapped market opportunities and operational efficiencies.</p>
+</div>
+<div class="flex-1 w-full flex justify-center">
+<img alt="Rocket taking off" class="w-32 h-32 object-contain opacity-80 filter mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ_ZJOt-YOtN8fGbzPKZRBIqnjtsY5c2MzNfCq9hibwWiapqV6DQ5ssvDXHKWvVvGTrHN_g7q9zHsJHgpS2MmcGGztC7fh6UjGriZdiFiEIRQ4E3cYm-ELUleL31WIhOF5vmSomr12PTqCvW4WYvkGZ3WHb4c8EcTfe_YTce5IU32byJvge5zM48BUbs8C8OsWdJ2WTViBPsKNCtAdDnZGbg6Qiuh2HgTdzGkfKs4ppFw0vxbticqz8ZEpGSt9igYmfw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Highlight -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-border-subtle">
+<div class="bento-item rounded-xl p-8 md:p-12 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none"></div>
+<div class="flex-1 z-10">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/10 border border-secondary/20 mb-6">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-code-sm text-code-sm text-secondary uppercase tracking-wider text-[10px]">Success Metric</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-4">67% reduction in manual processing</h2>
+<p class="font-body-lg text-body-lg text-text-muted mb-8 max-w-lg">
+                        See how we engineered an automated logistics pipeline that completely bypassed legacy data entry protocols, resulting in unprecedented operational velocity.
+                    </p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-secondary-fixed transition-colors" href="#">
+                        Read Full Case Study
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="flex-1 w-full aspect-video rounded-lg border border-border-subtle overflow-hidden relative bg-surface-elevated flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-border-subtle" data-icon="polyline">polyline</span>
+<div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')]"></div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop text-center border-t border-border-subtle bg-surface-elevated/30">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-4">Ready to Accelerate?</h2>
+<p class="font-body-lg text-body-lg text-text-muted max-w-xl mx-auto mb-8">
+                Deploy intelligent automation and gain total visibility into your operational metrics. Connect with our engineering team today.
+            </p>
+<button class="bg-primary-container text-white px-8 py-4 rounded font-label-md text-label-md hover:bg-inverse-primary transition-colors glow-button active:scale-95 duration-100 text-lg">Initialize Deployment</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim border-t border-border-subtle dark:border-border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface mb-4 block flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="terminal">terminal</span>
+                    BashPty
+                </span>
+<p class="font-body-sm text-body-sm text-text-muted dark:text-text-muted mt-2">© 2024 BashPty. Data-Driven Automation &amp; Integrated Growth.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-on-surface dark:text-on-surface mb-4">Platform</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Automation</a></li>
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Business Intelligence</a></li>
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Custom Software</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-on-surface dark:text-on-surface mb-4">Company</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-on-surface dark:text-on-surface mb-4">Legal</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-border-subtle flex justify-between items-center">
+<p class="font-code-sm text-code-sm text-text-muted flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+                     System Status: All Systems Operational
+                 </p>
+</div>
+</div>
+</footer>
+</body></html>

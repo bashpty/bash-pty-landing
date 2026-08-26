@@ -25,7 +25,9 @@
       "title": "Bash Pty: Su Socio para la Automatización Basada en Datos y el Crecimiento Integrado.",
       "subtitle": "Construimos y gestionamos su pila tecnológica completa, desde TI resiliente y software a medida hasta automatización inteligente y paneles de BI.",
       "exploreServices": "Explore Nuestros Servicios",
-      "scheduleAudit": "Agende su Auditoría de Automatización Gratuita"
+      "scheduleAudit": "Agende su Auditoría de Automatización Gratuita",
+      "accelerate": "Acelere Su Stack",
+      "viewCaseStudies": "Ver Casos de Éxito"
     },
     "bento": {
       "customSoftware": {
@@ -51,11 +53,24 @@
       "web3Lab": {
         "title": "Tecnología Emergente y Web3",
         "description": "Su socio de I+D para proyectos de DeFi, KYC e IoT."
-      }
+      },
+      "sectionTitle": "Arquitectura Principal",
+      "sectionSubtitle": "Soluciones modulares diseñadas para resiliencia, claridad y escala exponencial."
     }
   },
   "trustSignals": {
     "trustedBy": "Con la confianza de las empresas líderes de Panamá:"
+  },
+  "caseStudyCard": {
+    "badge": "Métrica de Éxito",
+    "title": "Reducción del 67% en el procesamiento manual",
+    "description": "Vea cómo diseñamos un pipeline logístico automatizado que eliminó por completo los protocolos de ingreso de datos heredados, logrando una velocidad operacional sin precedentes.",
+    "readMore": "Leer el Caso de Estudio Completo"
+  },
+  "heroCta": {
+    "title": "¿Listo para Acelerar?",
+    "description": "Implemente automatización inteligente y obtenga visibilidad total de sus métricas operativas. Conéctese con nuestro equipo de ingeniería hoy.",
+    "button": "Iniciar Despliegue"
   },
   "caseStudyHighlight": {
     "title": "Caso de Estudio Destacado",

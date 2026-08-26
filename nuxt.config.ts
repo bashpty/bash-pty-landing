@@ -1,83 +1,61 @@
+import Aura from "@primevue/themes/aura";
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxtjs/google-fonts"],
+  compatibilityDate: "2026-08-26",
+  srcDir: ".",
+  modules: ["@primevue/nuxt-module", "@nuxtjs/i18n", "@nuxtjs/google-fonts"],
   pages: true,
+
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: ".dark",
+          cssLayer: { name: "primevue", order: "tailwind-base, primevue, tailwind-utilities" },
+        },
+      },
+    },
+  },
+
   i18n: {
     locales: [
-      { code: "en", iso: "en-US", file: "en.json" },
-      { code: "es", iso: "es-ES", file: "es.json" },
-      { code: "pt", iso: "pt-BR", file: "pt.json" },
+      { code: "en", language: "en-US", name: "English", file: "en.ts" },
+      { code: "es", language: "es-ES", name: "Español", file: "es.ts" },
+      { code: "pt", language: "pt-BR", name: "Português", file: "pt.ts" },
     ],
-    lazy: true,
-    langDir: "i18n/locales",
+    lazy: false,
+    langDir: "locales",
     defaultLocale: "en",
+    bundle: { optimizeTranslationDirective: false },
   },
+
   googleFonts: {
     families: {
       Geist: [400, 500, 600, 700],
       Inter: [400, 500, 600],
+      'JetBrains+Mono': [400, 500],
     },
   },
-  ui: {
-    primary: 'afc6ff',
-    gray: 'zinc',
-    colors: [
-      "on-error-container",
-      "on-primary-container",
-      "on-secondary-fixed-variant",
-      "surface-container-lowest",
-      "surface-container-high",
-      "surface",
-      "on-secondary-fixed",
-      "on-tertiary-fixed-variant",
-      "secondary-container",
-      "on-tertiary-container",
-      "on-surface",
-      "on-surface-variant",
-      "secondary",
-      "secondary-fixed",
-      "surface-container-highest",
-      "success-vibrant",
-      "on-secondary-container",
-      "primary",
-      "surface-container",
-      "zinc-400",
-      "surface-bright",
-      "primary-container",
-      "on-secondary",
-      "on-primary-fixed-variant",
-      "primary-fixed",
-      "inverse-on-surface",
-      "surface-dim",
-      "error",
-      "primary-fixed-dim",
-      "outline-variant",
-      "inverse-primary",
-      "tertiary-container",
-      "surface-container-low",
-      "tertiary-fixed-dim",
-      "background",
-      "on-background",
-      "on-primary-fixed",
-      "zinc-800",
-      "error-container",
-      "on-tertiary-fixed",
-      "warning-amber",
-      "on-error",
-      "tertiary-fixed",
-      "outline",
-      "slate-900",
-      "tertiary",
-      "surface-variant",
-      "on-primary",
-      "on-tertiary",
-      "secondary-fixed-dim",
-      "surface-tint",
-      "inverse-surface",
-    ],
+
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' },
+      ],
+    },
   },
+
+  css: ["~/assets/css/main.css"],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
   devtools: { enabled: true },
 });
-
-

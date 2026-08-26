@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BashPty - Open-Source Business Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004299",
+                      "secondary": "#43e186",
+                      "border-subtle": "#27272A",
+                      "inverse-on-surface": "#313032",
+                      "surface-variant": "#353437",
+                      "tertiary": "#c0c1ff",
+                      "surface-dim": "#131315",
+                      "tertiary-container": "#4344d1",
+                      "on-tertiary-container": "#cbccff",
+                      "surface-container-lowest": "#0e0e10",
+                      "tertiary-fixed-dim": "#c0c1ff",
+                      "on-secondary-container": "#004824",
+                      "surface-container-low": "#1c1b1d",
+                      "secondary-container": "#02c16a",
+                      "primary": "#afc6ff",
+                      "secondary-fixed": "#65fe9f",
+                      "outline-variant": "#434752",
+                      "surface-container-high": "#2a2a2c",
+                      "inverse-primary": "#255bb8",
+                      "inverse-surface": "#e5e1e4",
+                      "text-muted": "#A1A1AA",
+                      "on-secondary-fixed": "#00210d",
+                      "surface": "#131315",
+                      "surface-elevated": "#18181B",
+                      "primary-fixed": "#d9e2ff",
+                      "tertiary-fixed": "#e1e0ff",
+                      "primary-fixed-dim": "#afc6ff",
+                      "on-tertiary-fixed": "#07006c",
+                      "primary-container": "#1d55b2",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#afc6ff",
+                      "on-background": "#e5e1e4",
+                      "on-tertiary": "#1000a9",
+                      "surface-container-highest": "#353437",
+                      "background": "#131315",
+                      "secondary-fixed-dim": "#43e186",
+                      "on-secondary": "#00391b",
+                      "on-error-container": "#ffdad6",
+                      "on-primary": "#002d6d",
+                      "on-surface": "#e5e1e4",
+                      "on-secondary-fixed-variant": "#00522a",
+                      "on-tertiary-fixed-variant": "#2f2ebe",
+                      "on-surface-variant": "#c3c6d4",
+                      "outline": "#8d909e",
+                      "on-primary-fixed": "#001944",
+                      "surface-container": "#201f22",
+                      "error-container": "#93000a",
+                      "surface-card": "#111114",
+                      "on-primary-container": "#bed0ff",
+                      "on-error": "#690005",
+                      "surface-bright": "#39393b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2rem",
+                      "gutter": "1.5rem",
+                      "section-padding": "5rem",
+                      "bento-gap": "1rem"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ],
+                      "code-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "code-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Grid Background Pattern */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(39, 39, 42, 0.4) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(39, 39, 42, 0.4) 1px, transparent 1px);
+        }
+        
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(29, 85, 178, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="bg-background/95 dark:bg-background/95 backdrop-blur-md full-width top-0 z-50 sticky transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">hexagon</span>
+                BashPty
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Automation</a>
+<a aria-current="page" class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Intelligence</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Custom Stack</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Case Studies</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="px-4 py-2 rounded font-label-md text-label-md text-on-surface bg-transparent border border-border-subtle hover:bg-surface-elevated transition-colors duration-200 active:scale-95">Contact</button>
+<button class="px-4 py-2 rounded font-label-md text-label-md text-white bg-primary-container hover:brightness-110 transition-all duration-200 active:scale-95">Get Started</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding pt-8">
+<div class="max-w-container-max mx-auto">
+<div class="bg-surface-card border border-border-subtle rounded-xl overflow-hidden relative group">
+<!-- Decorative Grid -->
+<div class="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none"></div>
+<!-- Ambient Glow -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12 relative z-10 items-center">
+<div class="flex flex-col items-start space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-tertiary-container/20 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-sm">database</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-xs">DATA SOVEREIGNTY</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white">Open-Source Business Intelligence</h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-xl">Break free from vendor lock-in. We deploy, customize, and embed powerful open-source BI tools like Metabase and Superset into your ecosystem.</p>
+<button class="mt-4 px-6 py-3 rounded bg-primary-container text-white font-label-md text-label-md flex items-center gap-2 hover:brightness-110 transition-all active:scale-95">
+                                Deploy Now
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden border border-border-subtle shadow-2xl bg-surface">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHwfi9txvaW4Y_6zHpD8bP9gz0z7UDi19KeHJaRf9ILYauyDLKWWJu57qUTnN86MqqIgLjoaO6IioTtYfZ23rEiAadLhUustyQ2uU3-QfuZv7iLrm9COHIvy19itL0kCXRVymea7nS9k9H0rqW42arMIyuLv80gOj8UEu5lA4yH8oXi8CeyzGmG0Tqv6177TNNqE-DnjHlFb8lTb5iVWLf5PtRCiWqg10d1arzNkp-JIKiW2yyvZYLTIqXeqsj6kn8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem / Solution Bento -->
+<section class="px-margin-mobile md:px-margin-desktop py-8">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-bento-gap">
+<!-- Problem Card -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-8 flex flex-col relative overflow-hidden group">
+<div class="absolute top-8 right-8 text-border-subtle group-hover:text-error/10 transition-colors duration-500">
+<span class="material-symbols-outlined" style="font-size: 120px;">account_tree</span>
+</div>
+<div class="w-12 h-12 rounded border border-error/30 bg-error/10 flex items-center justify-center mb-6 text-error">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-4 relative z-10">The Data Silo Dilemma</h3>
+<p class="font-body-md text-body-md text-text-muted relative z-10">SaaS companies often struggle with fragmented data sources and exorbitant licensing fees for proprietary BI tools. This creates bottlenecks in reporting and limits customer visibility into their own metrics.</p>
+</div>
+<!-- Solution Card -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-8 flex flex-col relative overflow-hidden group glow-hover transition-shadow duration-300">
+<div class="absolute top-8 right-8 text-border-subtle group-hover:text-primary-container/20 transition-colors duration-500">
+<span class="material-symbols-outlined" style="font-size: 120px;">database</span>
+</div>
+<div class="w-12 h-12 rounded border border-primary/30 bg-primary-container/20 flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-4 relative z-10">Integrated Open-Source</h3>
+<p class="font-body-md text-body-md text-text-muted relative z-10">We implement centralized architectures using tools like Metabase and Apache Superset. Enjoy a single source of truth, unlimited users, and seamless embedding into your existing applications.</p>
+</div>
+</div>
+</section>
+<!-- Core Capabilities Bento -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="max-w-container-max mx-auto">
+<div class="mb-12">
+<h2 class="font-display-lg text-display-lg text-white mb-2">Core Capabilities</h2>
+<p class="font-body-lg text-body-lg text-text-muted">Tailored deployment strategies for modern data stacks.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap">
+<!-- Feature 1 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-6 flex flex-col hover:border-outline-variant transition-colors">
+<div class="text-on-surface mb-4">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-3">Self-Service BI (Metabase)</h4>
+<p class="font-body-sm text-body-sm text-text-muted mb-6 flex-grow">Empower your team to explore data without writing SQL. We configure robust Metabase instances connected directly to your data warehouses.</p>
+<div class="flex gap-2 mt-auto">
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">PostgreSQL</span>
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">Snowflake</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-6 flex flex-col hover:border-outline-variant transition-colors relative">
+<div class="absolute top-6 right-6">
+<span class="px-2 py-1 rounded bg-secondary-container/10 border border-secondary-container/30 font-label-md text-label-md text-secondary uppercase text-[10px]">High Demand</span>
+</div>
+<div class="text-on-surface mb-4">
+<span class="material-symbols-outlined">web</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-3">Embedded Analytics</h4>
+<p class="font-body-sm text-body-sm text-text-muted mb-6 flex-grow">Inject powerful, interactive dashboards directly into your SaaS product's frontend, providing white-labeled value to your end users.</p>
+<div class="flex gap-2 mt-auto">
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">React</span>
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">Vue.js</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-6 flex flex-col hover:border-outline-variant transition-colors">
+<div class="text-on-surface mb-4">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-3">Real-Time Monitoring</h4>
+<p class="font-body-sm text-body-sm text-text-muted mb-6 flex-grow">Deploy Grafana alongside Prometheus or InfluxDB for sub-second telemetry visualization, perfect for IoT or high-frequency transactional systems.</p>
+<div class="flex gap-2 mt-auto">
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">Grafana</span>
+<span class="px-2 py-1 rounded bg-surface border border-border-subtle font-code-sm text-code-sm text-text-muted">IoT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="px-margin-mobile md:px-margin-desktop py-8 pb-section-padding">
+<div class="max-w-container-max mx-auto bg-surface-card border border-border-subtle rounded-xl p-8 md:p-12 flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/3">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-4">Technical Specifications</h2>
+<p class="font-body-md text-body-md text-text-muted">Built for secure, scalable integration into modern web architectures.</p>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Spec 1 -->
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded bg-surface border border-border-subtle flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-sm">api</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-white mb-1">Frontend Agnostic</h5>
+<p class="font-body-sm text-body-sm text-text-muted">Seamless iframe or SDK injection for React, Vue, Svelte, and native HTML environments.</p>
+</div>
+</div>
+<!-- Spec 2 -->
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded bg-surface border border-border-subtle flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-white mb-1">Row-Level Security</h5>
+<p class="font-body-sm text-body-sm text-text-muted">Utilize secure JWT signing to enforce multi-tenant data isolation within embedded views.</p>
+</div>
+</div>
+<!-- Spec 3 -->
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded bg-surface border border-border-subtle flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-sm">layers</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-white mb-1">Infrastructure as Code</h5>
+<p class="font-body-sm text-body-sm text-text-muted">Deployments managed via Terraform and Docker for reproducible, scalable environments.</p>
+</div>
+</div>
+<!-- Spec 4 -->
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded bg-surface border border-border-subtle flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-sm">sync</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-white mb-1">Continuous Sync</h5>
+<p class="font-body-sm text-body-sm text-text-muted">Automated data pipeline integration ensuring dashboards reflect near real-time state.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-dim dark:bg-surface-dim full-width border-t border-border-subtle dark:border-border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface mb-4 block">BashPty</span>
+<p class="font-body-sm text-body-sm text-text-muted mb-4 max-w-sm">© 2024 BashPty. Data-Driven Automation &amp; Integrated Growth.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-primary dark:text-primary mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors block" href="#">Automation</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface dark:text-on-surface hover:text-primary dark:hover:text-primary transition-colors block" href="#">Business Intelligence</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors block" href="#">Custom Software</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-primary dark:text-primary mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors block" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted dark:text-text-muted hover:text-primary dark:hover:text-primary transition-colors block" href="#">Privacy Policy</a></li>
+<li class="mt-4"><span class="font-body-sm text-body-sm text-secondary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span> System Status: All Systems Operational</span></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
