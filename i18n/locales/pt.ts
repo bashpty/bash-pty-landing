@@ -5,6 +5,9 @@ export default {
     automation: "Automação",
     intelligence: "Análises",
     customStack: "Stack",
+    managedIT: "TI Gerenciada",
+    strategicGrowth: "Crescimento",
+    emergingTech: "Tec. Emergente",
     caseStudies: "Casos",
     contact: "Contato",
   },
@@ -31,9 +34,8 @@ export default {
   },
   homepage: {
     meta: {
-      title: "Bash Pty - Automação Orientada por Dados e Crescimento Integrado",
-      description:
-        "Seu Parceiro para Automação Orientada por Dados e Crescimento Integrado. Construímos e gerenciamos sua pilha de tecnologia completa — de TI resiliente e software personalizado a automação inteligente e painéis de BI.",
+      title: "Bash Pty",
+      description: "Sua melhor escolha tecnológica 🖥️",
     },
     hero: {
       title:
@@ -259,7 +261,7 @@ export default {
       },
       email: {
         label: "E-mail Direto",
-        value: "hello@bashpty.io",
+        value: "info@bashpty.com",
       },
       location: {
         label: "Sede Principal",
@@ -720,7 +722,7 @@ export default {
       testimonial: {
         quote:
           "A Bash Pty automatizou todo o nosso processo de faturamento com o n8n, economizando mais de 40 horas por semana.",
-        author: "John Doe, CEO da Example Corp",
+        author: "Michael Taqlento, CEO da Fund Your Trades",
       },
       cta: {
         title: "Pare de se Afogar em Trabalho Manual",
@@ -809,12 +811,232 @@ export default {
     },
     digitalMarketing: {
       title: "Serviços de Crescimento Estratégico",
+      hero: {
+        badge: "Crescimento",
+        title: "Serviços de Crescimento Estratégico",
+        description:
+          "Fazemos parceria com você para acelerar seu negócio por meio de tecnologia, treinamento e estratégia baseada em dados.",
+        cta: "Agendar uma Chamada",
+      },
+      features: [
+        {
+          title: "Montamos a infraestrutura do seu projeto",
+          description:
+            "Assessoramos e ajudamos a gerar vendas dos seus serviços ou produtos em troca de uma porcentagem dessas vendas.",
+          icon: "rocket_launch",
+        },
+        {
+          title: "Treinamentos e Acompanhamento",
+          description:
+            "Fornecemos a base de conhecimento para a equipe sobre as ferramentas tecnológicas implementadas.",
+          icon: "school",
+        },
+        {
+          title: "Atualizações regulares com a tecnologia mais atual",
+          description:
+            "Suporte em todas as ferramentas e aplicações instaladas.",
+          icon: "update",
+        },
+        {
+          title: "Estatísticas dos projetos",
+          description:
+            "Implementamos uma base estatística para monitorar o desempenho do projeto.",
+          icon: "bar_chart",
+        },
+      ],
     },
     managedIT: {
       title: "TI Gerenciada e Infraestrutura",
+      hero: {
+        badge: "Infraestrutura",
+        title: "TI Gerenciada e Infraestrutura",
+        description:
+          "Gerenciamos seus equipamentos e infraestrutura tecnológica com os melhores fornecedores do mercado para que você se concentre no seu negócio.",
+        cta: "Agendar uma Chamada",
+      },
+      features: [
+        {
+          title: "Cotação e Compras",
+          description:
+            "Gerenciamos seus equipamentos e infraestrutura tecnológica com os melhores fornecedores do mercado.",
+          icon: "shopping_cart",
+        },
+        {
+          title: "Licenciamento de Software",
+          description:
+            "Contamos com grande variedade de licenças adaptadas às necessidades do seu negócio.",
+          icon: "verified",
+        },
+        {
+          title: "Sistemas de Segurança",
+          description:
+            "Centrais de Câmeras, Alarmes, sensores e sistemas de controle de acesso.",
+          icon: "security",
+        },
+        {
+          title: "Domótica e Internet das Coisas",
+          description:
+            "Automação residencial com Alexa, Google e outros agentes; instalações de interruptores, atuadores e mais.",
+          icon: "home_iot_device",
+        },
+        {
+          title: "Gestor de Computação em Nuvem",
+          description:
+            "Administração e otimização das nuvens mais utilizadas do mercado (Azure, AWS, Google).",
+          icon: "cloud",
+        },
+      ],
+      databases: {
+        title: "Administração de Banco de Dados",
+        description:
+          "Gestão especializada de bancos de dados relacionais e não relacionais para alta disponibilidade e desempenho.",
+        relational: {
+          label: "Bancos de Dados Relacionais",
+          items: ["Oracle", "SQL Server", "MySQL", "PostgreSQL"],
+        },
+        nonRelational: {
+          label: "Bancos de Dados Não Relacionais",
+          items: ["MongoDB", "Amazon DynamoDB", "Redis"],
+        },
+      },
     },
     web3Lab: {
       title: "Laboratório de Tecnologia Emergente e Web3",
+      hero: {
+        badge: "Tecnologias Emergentes",
+        title: "Tecnologias Emergentes 🌐",
+        description:
+          "Seu parceiro de P&D em Web3, identidade descentralizada, IoT, agentes de IA e experiências imersivas.",
+        cta: "Agendar uma Chamada",
+      },
+      features: [
+        {
+          title: "Desenvolvimento de Projetos Web3",
+          description:
+            "Finanças descentralizadas DeFi, microcréditos, mineração de criptomoedas, Organizações Autônomas Descentralizadas (DAOs).",
+          icon: "currency_bitcoin",
+        },
+        {
+          title: "Verificação de Identidade KYC Tradicional ou Descentralizada",
+          description:
+            "Usamos blockchain e contratos inteligentes para verificação de identidade e APIs de terceiros conectadas ao registro público do seu país.",
+          icon: "badge",
+        },
+        {
+          title: "Internet das Coisas IoT",
+          description:
+            "Conecte dispositivos inteligentes a sistemas de automação residencial e à blockchain.",
+          icon: "home_iot_device",
+        },
+        {
+          title: "Gateways de Pagamento",
+          description:
+            "Implementamos gateways de pagamento com cartões de crédito e criptomoedas conforme sua necessidade.",
+          icon: "credit_card",
+        },
+        {
+          title: "Tours 3D e VR para Imóveis",
+          description:
+            "Experiências imersivas em 3D e realidade virtual para imóveis e tours de propriedades.",
+          icon: "view_in_ar",
+        },
+        {
+          title: "Agentes de IA",
+          description:
+            "Agentes autônomos inteligentes que automatizam fluxos de trabalho complexos, atendimento ao cliente e processos de tomada de decisão.",
+          icon: "smart_toy",
+        },
+        {
+          title: "Integração de IA nos Negócios",
+          description:
+            "Integração end-to-end de modelos de IA nos seus processos de negócio, desde pipelines de dados até APIs prontas para produção.",
+          icon: "hub",
+        },
+      ],
+    },
+  },
+  cookies: {
+    title: "Aviso de Cookies",
+    description:
+      "Usamos cookies para melhorar sua experi\u00eancia e analisar o desempenho do site. Consulte nossa ",
+    accept: "Aceitar",
+    reject: "Recusar",
+  },
+  legal: {
+    lastUpdated: "\u00daltima atualiza\u00e7\u00e3o: Agosto de 2026",
+    privacy: {
+      intro:
+        "Na Bash Pty, com domic\u00edlio principal e opera\u00e7\u00f5es na Rep\u00fablica do Panam\u00e1, comprometemo-nos a proteger sua privacidade e a seguran\u00e7a de seus dados corporativos, em estrito cumprimento com as normas de prote\u00e7\u00e3o de dados vigentes. Esta Pol\u00edtica de Privacidade descreve como coletamos, usamos, armazenamos e protegemos informa\u00e7\u00f5es pessoais e t\u00e9cnicas quando voc\u00ea utiliza nosso site, ferramentas de automa\u00e7\u00e3o, plataformas de intelig\u00eancia de neg\u00f3cios ou solicita nossos servi\u00e7os.",
+      sections: [
+        {
+          title: "1. Informa\u00e7\u00f5es que Coletamos",
+          body: "Coletamos informa\u00e7\u00f5es estritamente necess\u00e1rias para oferecer solu\u00e7\u00f5es tecnol\u00f3gicas de alto desempenho e automa\u00e7\u00e3o baseada em dados:",
+          items: [
+            "Dados de Contato e Registro: Nome completo, e-mail profissional, n\u00famero de telefone e nome da empresa ao preencher nossos formul\u00e1rios de contato, solicitar uma auditoria de automa\u00e7\u00e3o ou agendar uma chamada de estrat\u00e9gia.",
+            "Dados T\u00e9cnicos e de Infraestrutura: Ao interagir com nossos servi\u00e7os gerenciados, paineis de BI ou plataformas personalizadas, coletamos metadados de desempenho, registros de sistema, m\u00e9tricas de CPU/mem\u00f3ria e telemetria de rede sob rigorosos padr\u00f5es de seguran\u00e7a e soberania de dados.",
+            "Dados de Uso do Site: Informa\u00e7\u00f5es sobre sua navega\u00e7\u00e3o em nosso site atrav\u00e9s de cookies padr\u00e3o para otimizar a experi\u00eancia do usu\u00e1rio e o desempenho t\u00e9cnico.",
+          ],
+        },
+        {
+          title: "2. Uso das Informa\u00e7\u00f5es",
+          body: "Usamos as informa\u00e7\u00f5es coletadas para finalidades operacionais e comerciais leg\u00edtimas, incluindo:",
+          items: [
+            "Fornecer, implantar e manter nossas solu\u00e7\u00f5es de software, fluxos de trabalho automatizados com n8n e arquitetura em nuvem.",
+            "Gerenciar suporte preventivo 24/7, monitoramento de infraestrutura e resolu\u00e7\u00e3o de tickets t\u00e9cnicos.",
+            "Comunicar-nos com voc\u00ea para responder solicita\u00e7\u00f5es, coordenar auditorias de infraestrutura e entregar propostas comerciais.",
+            "Melhorar continuamente a seguran\u00e7a, resili\u00eancia e desempenho de nossos sistemas e pilhas tecnol\u00f3gicas.",
+          ],
+        },
+        {
+          title: "3. Soberania de Dados e Seguran\u00e7a",
+          body: "Na Bash Pty priorizamos a soberania absoluta de seus dados corporativos. Projetamos arquiteturas onde seus dados permanecem dentro de seus ambientes controlados ou servidores auto-hospedados. Implementamos medidas de seguran\u00e7a robustas de grau industrial: controle de acesso baseado em fun\u00e7\u00f5es, Row-Level Security, autentica\u00e7\u00e3o JWT e implanta\u00e7\u00f5es reproduz\u00edveis via infraestrutura como c\u00f3digo (Terraform, Docker).",
+        },
+        {
+          title: "4. Compartilhamento de Informa\u00e7\u00f5es com Terceiros",
+          body: "N\u00e3o vendemos, comercializamos nem transferimos suas informa\u00e7\u00f5es pessoais a terceiros. Compartilhamos dados apenas com provedores de servi\u00e7os confi\u00e1veis estritamente necess\u00e1rios para operar nossa infraestrutura, sob a condi\u00e7\u00e3o de que mantenham a confidencialidade e cumpram os padr\u00f5es de privacidade exigidos.",
+        },
+        {
+          title: "5. Seus Direitos de Privacidade",
+          body: "Voc\u00ea tem o direito de acessar, retificar, cancelar ou se opor ao tratamento de suas informa\u00e7\u00f5es pessoais a qualquer momento. Para exercer esses direitos de acordo com as leis da Rep\u00fablica do Panam\u00e1, voc\u00ea pode entrar em contato com nossa equipe pelo e-mail info@bashpty.com.",
+        },
+      ],
+    },
+    terms: {
+      intro:
+        "Os presentes Termos e Condi\u00e7\u00f5es regulam o acesso, uso do site e a contrata\u00e7\u00e3o de servi\u00e7os tecnol\u00f3gicos especializados oferecidos pela Bash Pty, com domic\u00edlio principal e opera\u00e7\u00f5es na Rep\u00fablica do Panam\u00e1. Ao utilizar nossos servi\u00e7os, voc\u00ea concorda expressamente em cumprir com as seguintes disposi\u00e7\u00f5es.",
+      sections: [
+        {
+          title: "1. Objeto e Escopo dos Servi\u00e7os Tecnol\u00f3gicos",
+          body: "A Bash Pty opera como um parceiro tecnol\u00f3gico abrangente especializado em:",
+          items: [
+            "Desenvolvimento de software personalizado, arquitetura em nuvem e infraestrutura como c\u00f3digo (Terraform, Docker).",
+            "Automa\u00e7\u00e3o avan\u00e7ada de fluxos de trabalho para processos de miss\u00e3o cr\u00edtica usando n8n.",
+            "Implementa\u00e7\u00e3o e configura\u00e7\u00e3o de plataformas de Intelig\u00eancia de Neg\u00f3cios (Metabase, Apache Superset) e observabilidade (Grafana, Prometheus, InfluxDB).",
+            "Servi\u00e7os gerenciados de TI, suporte preventivo 24/7 e gest\u00e3o de servidores.",
+          ],
+        },
+        {
+          title: "2. Propriedade Intelectual e Licenciamento de C\u00f3digo",
+          body: "Todo o c\u00f3digo-base preexistente, metodologias de automa\u00e7\u00e3o propriet\u00e1rias, bibliotecas de c\u00f3digo reutiliz\u00e1veis e ferramentas desenvolvidas pela Bash Pty permanecem propriedade exclusiva da Empresa. Uma vez cobertos integralmente os pagamentos do projeto, o Cliente adquire uma licen\u00e7a de uso perpet\u00faa, n\u00e3o exclusiva e mundial sobre o software desenvolvido exclusivamente para sua opera\u00e7\u00e3o. A implanta\u00e7\u00e3o de tecnologias de terceiros est\u00e1 sujeita \u00e0s licen\u00e7as desses fornecedores.",
+        },
+        {
+          title: "3. Responsabilidades Operacionais e Soberania de Dados",
+          body: "O Cliente \u00e9 respons\u00e1vel por fornecer acessos seguros, credenciais e permiss\u00f5es nos seus pr\u00f3prios ambientes. O Cliente reconhece sua obriga\u00e7\u00e3o de manter backups peri\u00f3dicos e completos de seus bancos de dados e sistemas, salvo contrata\u00e7\u00e3o formal de servi\u00e7o gerenciado de backup com a Bash Pty. Qualquer modifica\u00e7\u00e3o realizada pelo Cliente ou terceiros sem supervis\u00e3o da Bash Pty isenta a Empresa de qualquer garantia de estabilidade do sistema.",
+        },
+        {
+          title: "4. N\u00edveis de Servi\u00e7o (SLA) e Disponibilidade",
+          body: "Os servi\u00e7os gerenciados s\u00e3o regidos pelos Acordos de N\u00edvel de Servi\u00e7o (SLA) espec\u00edficos acordados no anexo t\u00e9cnico de cada cliente corporativo. A Bash Pty n\u00e3o garante que a opera\u00e7\u00e3o dos sistemas seja ininterrupta ou livre de erros absolutos, devido \u00e0 natureza inerente das redes de telecomunica\u00e7\u00f5es e provedores de servi\u00e7os em nuvem de terceiros.",
+        },
+        {
+          title: "5. Limita\u00e7\u00e3o de Responsabilidade",
+          body: "A Bash Pty n\u00e3o ser\u00e1 respons\u00e1vel sob nenhuma circunst\u00e2ncia por lucro cessante, perda de receita, interrup\u00e7\u00e3o de neg\u00f3cios, perda ou corrup\u00e7\u00e3o de dados corporativos, nem por danos indiretos. A responsabilidade total da Bash Pty limitar-se-\u00e1 estritamente ao valor total efetivamente pago pelo Cliente durante os tr\u00eas (3) meses anteriores ao evento que originou a reclama\u00e7\u00e3o.",
+        },
+        {
+          title:
+            "6. Modifica\u00e7\u00f5es, Lei Aplic\u00e1vel e Jurisdi\u00e7\u00e3o",
+          body: "A Bash Pty reserva-se o direito de atualizar estes Termos e Condi\u00e7\u00f5es a qualquer momento. Qualquer controv\u00e9rsia derivada da interpreta\u00e7\u00e3o ou execu\u00e7\u00e3o destes termos ser\u00e1 submetida \u00e0 jurisdi\u00e7\u00e3o exclusiva dos tribunais competentes da Rep\u00fablica do Panam\u00e1.",
+        },
+      ],
     },
   },
 } as const;

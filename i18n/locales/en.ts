@@ -5,6 +5,9 @@ export default {
     automation: "Automation",
     intelligence: "Analytics",
     customStack: "Custom Stack",
+    managedIT: "Managed IT",
+    strategicGrowth: "Strategic Growth",
+    emergingTech: "Emerging Tech",
     caseStudies: "Cases",
     contact: "Contact",
   },
@@ -31,9 +34,8 @@ export default {
   },
   homepage: {
     meta: {
-      title: "Bash Pty - Data-Driven Automation & Integrated Growth",
-      description:
-        "Your Partner for Data-Driven Automation & Integrated Growth. We build and manage your complete tech stack—from resilient IT and custom software to intelligent automation and BI dashboards.",
+      title: "Bash Pty",
+      description: "Your best technology choice 🖥️",
     },
     hero: {
       title:
@@ -256,7 +258,7 @@ export default {
       },
       email: {
         label: "Direct Email",
-        value: "hello@bashpty.io",
+        value: "info@bashpty.com",
       },
       location: {
         label: "Headquarters",
@@ -784,7 +786,7 @@ export default {
       testimonial: {
         quote:
           "Bash Pty automated our entire invoicing process with n8n, saving us 40+ hours per week.",
-        author: "John Doe, CEO of Example Corp",
+        author: "Michael Taqlento, CEO of Fund Your Trades",
       },
       cta: {
         title: "Stop Drowning in Manual Work",
@@ -873,12 +875,231 @@ export default {
     },
     digitalMarketing: {
       title: "Strategic Growth Services",
+      hero: {
+        badge: "Growth",
+        title: "Strategic Growth Services",
+        description:
+          "We partner with you to accelerate your business through technology, training, and data-driven strategy.",
+        cta: "Schedule a Call",
+      },
+      features: [
+        {
+          title: "We Set Up Your Project Infrastructure",
+          description:
+            "We advise and help you generate sales for your services or products in exchange for a percentage of those sales.",
+          icon: "rocket_launch",
+        },
+        {
+          title: "Training & Ongoing Support",
+          description:
+            "We provide the knowledge base for your team on all the technology tools implemented.",
+          icon: "school",
+        },
+        {
+          title: "Regular Updates with the Latest Technology",
+          description:
+            "Full support for all installed tools and applications, always up to date.",
+          icon: "update",
+        },
+        {
+          title: "Project Statistics",
+          description:
+            "We implement a statistical foundation to monitor the performance of the project.",
+          icon: "bar_chart",
+        },
+      ],
     },
     managedIT: {
       title: "Managed IT & Infrastructure",
+      hero: {
+        badge: "Infrastructure",
+        title: "Managed IT & Infrastructure",
+        description:
+          "We manage your technology equipment and infrastructure with the best suppliers on the market, so you can focus on your business.",
+        cta: "Schedule a Call",
+      },
+      features: [
+        {
+          title: "Procurement & Purchasing",
+          description:
+            "We manage your equipment and technology infrastructure with the best suppliers on the market.",
+          icon: "shopping_cart",
+        },
+        {
+          title: "Software Licensing",
+          description:
+            "We offer a wide variety of software licenses tailored to your business needs.",
+          icon: "verified",
+        },
+        {
+          title: "Security Systems",
+          description:
+            "CCTV control centers, alarms, sensors and access control systems.",
+          icon: "security",
+        },
+        {
+          title: "Smart Home & IoT",
+          description:
+            "Home automation with Alexa, Google and other agents; installation of switches, actuators and more.",
+          icon: "home_iot_device",
+        },
+        {
+          title: "Cloud Computing Manager",
+          description:
+            "Administration and optimization of the most widely used cloud platforms on the market (Azure, AWS, Google).",
+          icon: "cloud",
+        },
+      ],
+      databases: {
+        title: "Database Administration",
+        description:
+          "Expert management of relational and non-relational databases for high availability and performance.",
+        relational: {
+          label: "Relational Databases",
+          items: ["Oracle", "SQL Server", "MySQL", "PostgreSQL"],
+        },
+        nonRelational: {
+          label: "Non-Relational Databases",
+          items: ["MongoDB", "Amazon DynamoDB", "Redis"],
+        },
+      },
     },
     web3Lab: {
       title: "Emerging Tech & Web3 Lab",
+      hero: {
+        badge: "Emerging Technologies",
+        title: "Emerging Technologies 🌐",
+        description:
+          "Your R&D partner for Web3, decentralized identity, IoT, AI agents, and immersive experiences.",
+        cta: "Schedule a Call",
+      },
+      features: [
+        {
+          title: "Web3 Project Development",
+          description:
+            "Decentralized finance (DeFi), microcredits, cryptocurrency mining, and Decentralized Autonomous Organizations (DAOs).",
+          icon: "currency_bitcoin",
+        },
+        {
+          title: "KYC Identity Verification (Traditional & Decentralized)",
+          description:
+            "We use blockchain and smart contracts for identity verification and third-party APIs connected to your country's public registry.",
+          icon: "badge",
+        },
+        {
+          title: "Internet of Things (IoT)",
+          description:
+            "Link smart devices to home automation systems and the blockchain.",
+          icon: "home_iot_device",
+        },
+        {
+          title: "Payment Gateways",
+          description:
+            "We implement payment gateways for credit cards and cryptocurrencies tailored to your needs.",
+          icon: "credit_card",
+        },
+        {
+          title: "3D & VR Property Tours",
+          description:
+            "Immersive 3D and virtual reality experiences for real estate and property tours.",
+          icon: "view_in_ar",
+        },
+        {
+          title: "AI Agents",
+          description:
+            "Intelligent autonomous agents that automate complex workflows, customer support, and decision-making processes.",
+          icon: "smart_toy",
+        },
+        {
+          title: "AI Business Integration",
+          description:
+            "End-to-end integration of AI models into your business processes, from data pipelines to production-ready APIs.",
+          icon: "hub",
+        },
+      ],
+    },
+  },
+  cookies: {
+    title: "Cookie Notice",
+    description:
+      "We use cookies to improve your experience and analyze site performance. See our ",
+    accept: "Accept",
+    reject: "Decline",
+  },
+  legal: {
+    lastUpdated: "Last updated: August 2026",
+    privacy: {
+      intro:
+        "At Bash Pty, with principal domicile and operations in the Republic of Panama, we are committed to protecting your privacy and the security of your corporate data, in strict compliance with applicable data protection regulations. This Privacy Policy describes how we collect, use, store and protect personal and technical information when you use our website, automation tools, business intelligence platforms or request our services.",
+      sections: [
+        {
+          title: "1. Information We Collect",
+          body: "We collect strictly necessary information to provide you with high-performance technology solutions and data-driven automation:",
+          items: [
+            "Contact & Registration Data: Full name, work email, phone number and company name when you complete contact forms, request an automation audit or schedule a strategy call.",
+            "Technical & Infrastructure Data: When interacting with our managed services, BI dashboards or custom platforms, we collect performance metadata, system logs, CPU/memory metrics and network telemetry under strict security and data sovereignty standards.",
+            "Website Usage Data: Information about your navigation on our website through standard cookies to optimize user experience and technical performance.",
+          ],
+        },
+        {
+          title: "2. Use of Information",
+          body: "We use collected information for legitimate operational and commercial purposes, including:",
+          items: [
+            "Providing, deploying and maintaining our software solutions, automated workflows with n8n, and cloud architecture.",
+            "Managing 24/7 preventive support, infrastructure monitoring and technical ticket resolution.",
+            "Communicating with you to respond to requests, coordinate infrastructure audits and deliver commercial proposals.",
+            "Continuously improving the security, resilience and performance of our systems and technology stacks.",
+          ],
+        },
+        {
+          title: "3. Data Sovereignty & Security",
+          body: "At Bash Pty we prioritize absolute sovereignty of your corporate data. We design architectures where your data remains within your controlled environments or self-hosted servers. We implement robust industrial-grade security measures such as role-based access control lists, Row-Level Security, JWT authentication and reproducible deployments via infrastructure as code (Terraform, Docker).",
+        },
+        {
+          title: "4. Sharing Information with Third Parties",
+          body: "We do not sell, market or transfer your personal information to third parties. We only share data with trusted service providers strictly necessary to operate our infrastructure, under the condition that they maintain confidentiality and comply with required privacy standards.",
+        },
+        {
+          title: "5. Your Privacy Rights",
+          body: "You have the right to access, rectify, cancel or object to the processing of your personal information at any time. To exercise these rights in accordance with the laws of the Republic of Panama, you may contact our team directly at info@bashpty.com.",
+        },
+      ],
+    },
+    terms: {
+      intro:
+        'These Terms and Conditions govern access, use of the website and the contracting of specialized technological services offered by Bash Pty, with principal domicile and operations in the Republic of Panama. By using our engineering, software development, automation or infrastructure services, you (hereinafter "the Client" or "the User") expressly agree to comply with the following provisions.',
+      sections: [
+        {
+          title: "1. Scope of Technology Services",
+          body: "Bash Pty operates as a comprehensive technology partner specializing in:",
+          items: [
+            "Custom software development, cloud architecture and infrastructure as code (Terraform, Docker).",
+            "Advanced workflow automation for mission-critical processes using n8n.",
+            "Implementation and configuration of Business Intelligence platforms (Metabase, Apache Superset) and observability (Grafana, Prometheus, InfluxDB).",
+            "Managed IT services, 24/7 preventive support and server management.",
+          ],
+        },
+        {
+          title: "2. Intellectual Property & Code Licensing",
+          body: "All pre-existing codebase, proprietary automation methodologies, reusable code libraries, architecture designs and tools developed by Bash Pty remain the exclusive property of the Company. Once project payments are fully covered, the Client acquires a perpetual, non-exclusive, worldwide usage license over software developed exclusively for their operation. Deployment of open-source or third-party technologies (n8n, Docker, Metabase, Grafana) is subject to those vendors' licenses.",
+        },
+        {
+          title: "3. Operational Responsibilities & Data Sovereignty",
+          body: "The Client is responsible for providing secure access, credentials and permissions in their own cloud or local server environments. The Client acknowledges their obligation to maintain periodic and complete backups of their databases and systems, unless a formally contracted managed backup service with Bash Pty is in place. Any modifications made directly by the Client or third parties without Bash Pty supervision void any system stability warranty.",
+        },
+        {
+          title: "4. Service Level Agreements (SLA) & Availability",
+          body: "Managed IT, observability and technical support services are governed by specific SLAs agreed in the technical annex or maintenance contract of each corporate client. Bash Pty does not guarantee uninterrupted system operation due to the inherent nature of telecommunications networks, global cybersecurity and third-party cloud service providers (AWS, GCP, VPS servers).",
+        },
+        {
+          title: "5. Limitation of Liability",
+          body: "Bash Pty shall not be liable under any circumstance for lost profits, revenue loss, business interruption, loss or corruption of corporate data, or indirect consequential damages. Total cumulative liability shall be strictly limited to the total amount effectively paid by the Client for the specific service during the three (3) months prior to the event giving rise to the claim.",
+        },
+        {
+          title: "6. Modifications, Governing Law & Jurisdiction",
+          body: "Bash Pty reserves the right to update these Terms and Conditions at any time. Any dispute arising from the interpretation or execution of these terms shall be submitted to the exclusive jurisdiction of the competent courts of the Republic of Panama, governed by the laws of said country.",
+        },
+      ],
     },
   },
 } as const;

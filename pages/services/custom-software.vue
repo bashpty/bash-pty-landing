@@ -14,11 +14,11 @@
                     $t('services.customSoftware.hero.title') }}</h1>
                 <p class="font-body-lg text-body-lg text-text-muted mb-8">{{
                     $t('services.customSoftware.hero.description') }}</p>
-                <NuxtLink to="/contact"
+                <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary active:scale-95 glow-button">
                     {{ $t('services.customSoftware.cta.button') }}
                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                </NuxtLink>
+                </a>
             </div>
         </section>
 
@@ -67,7 +67,8 @@
                     <div v-for="tech in technologies" :key="tech.key"
                         class="bg-surface-card border border-border-subtle rounded-xl p-6">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-primary">{{ tech.icon }}</span>
+                            <img :src="`/${tech.key}.svg`" :alt="tech.name"
+                                class="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0" />
                             <h3 class="font-headline-md text-headline-md text-on-surface">{{ tech.name }}</h3>
                         </div>
                         <p class="font-body-sm text-body-sm text-text-muted">{{
@@ -84,22 +85,22 @@
                 $t('services.customSoftware.cta.title') }}</h2>
             <p class="font-body-md text-body-md text-text-muted max-w-xl mx-auto mb-8">{{
                 $t('services.customSoftware.cta.description') }}</p>
-            <NuxtLink to="/contact"
+            <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary active:scale-95 glow-button">
                 {{ $t('services.customSoftware.cta.button') }}
                 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </NuxtLink>
+            </a>
         </section>
     </main>
 </template>
 
 <script setup lang="ts">
 const technologies = [
-    { key: 'vue', name: 'Vue / Nuxt', icon: 'web' },
-    { key: 'react', name: 'React', icon: 'code' },
-    { key: 'java', name: 'Java / Spring', icon: 'coffee' },
-    { key: 'python', name: 'Python', icon: 'terminal' },
-    { key: 'dotnet', name: '.NET', icon: 'build' },
-    { key: 'flutter', name: 'Flutter', icon: 'smartphone' },
+    { key: 'vue', name: 'Vue / Nuxt' },
+    { key: 'react', name: 'React' },
+    { key: 'java', name: 'Java / Spring' },
+    { key: 'python', name: 'Python' },
+    { key: 'dotnet', name: '.NET' },
+    { key: 'flutter', name: 'Flutter' },
 ]
 </script>

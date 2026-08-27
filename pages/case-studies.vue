@@ -49,11 +49,11 @@
             <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">{{ $t('caseStudies.cta.title') }}</h2>
             <p class="font-body-md text-body-md text-text-muted max-w-2xl mx-auto mb-8">{{
                 $t('caseStudies.cta.subtitle') }}</p>
-            <NuxtLink to="/contact"
+            <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:brightness-110 active:scale-95 glow-button">
                 {{ $t('caseStudies.cta.button') }}
                 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </NuxtLink>
+            </a>
         </div>
     </main>
 </template>

@@ -24,7 +24,7 @@
                     class="w-14 h-14 rounded-full flex items-center justify-center shadow-[0_4px_16px_rgba(29,85,178,0.35)] transition-all duration-200 active:scale-95"
                     :class="menuOpen
                         ? 'bg-primary text-on-primary'
-                        : 'bg-gradient-to-br from-secondary to-primary text-white'">
+                        : 'bg-gradient-to-br from-[#002d6d] to-primary text-white'">
                     <span class="material-symbols-outlined text-[22px] transition-transform duration-300"
                         :class="menuOpen ? 'rotate-90' : ''">
                         {{ menuOpen ? 'close' : 'menu' }}
@@ -92,6 +92,9 @@ const allLinks = [
     { key: 'mobileNav.automation', to: '/services/workflow-automation', icon: 'schema' },
     { key: 'mobileNav.intelligence', to: '/services/business-intelligence', icon: 'bar_chart' },
     { key: 'mobileNav.customStack', to: '/services/custom-software', icon: 'code_blocks' },
+    { key: 'mobileNav.managedIT', to: '/services/managed-it', icon: 'dns' },
+    { key: 'mobileNav.strategicGrowth', to: '/services/strategic-growth', icon: 'trending_up' },
+    { key: 'mobileNav.emergingTech', to: '/services/emerging-tech', icon: 'hub' },
     { key: 'mobileNav.caseStudies', to: '/case-studies', icon: 'menu_book' },
     { key: 'mobileNav.contact', to: '/contact', icon: 'mail' },
 ]

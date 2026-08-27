@@ -6,5 +6,7 @@
     </main>
     <Footer />
     <MobileNav />
+    <ScrollToTop />
+    <CookieConsent />
   </div>
 </template>

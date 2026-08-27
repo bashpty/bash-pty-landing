@@ -17,23 +17,21 @@
                         {{ $t('services.workflowAutomation.hero.subtitle') }}
                     </p>
                     <div class="flex gap-4 pt-4">
-                        <NuxtLink to="/contact"
+                        <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                             class="bg-primary-container text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary active:scale-95 transition-all glow-button">
                             {{ $t('services.workflowAutomation.cta.ctaText') }}
-                        </NuxtLink>
+                        </a>
                     </div>
                 </div>
-                <!-- Code terminal mock -->
+                <!-- n8n workflow demo video -->
                 <div
-                    class="relative bg-surface-card border border-border-subtle rounded-xl p-4 overflow-hidden h-80 flex flex-col justify-end">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent"></div>
-                    <div
-                        class="relative z-10 bg-background/80 backdrop-blur-sm border border-border-subtle rounded-lg p-4">
-                        <p class="font-code-sm text-code-sm text-text-muted mb-2">// Executing workflow:
+                    class="relative bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+                    <video class="w-full h-auto block" autoplay loop muted playsinline>
+                        <source src="/n8n.mp4" type="video/mp4" />
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 bg-background/80 backdrop-blur-sm border-t border-border-subtle px-4 py-2">
+                        <p class="font-code-sm text-code-sm text-text-muted">// Executing workflow:
                             InvoiceProcessing_v2</p>
-                        <p class="font-code-sm text-code-sm text-on-surface mb-1">&gt; n8n execute --id 8f92a</p>
-                        <p class="font-code-sm text-code-sm text-secondary">&gt; Status: Success. 42 nodes processed.
-                            Data synchronized to ERP.</p>
                     </div>
                 </div>
             </div>
@@ -141,11 +139,11 @@
                 <span class="material-symbols-outlined text-4xl text-primary mb-4 block">terminal</span>
                 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">{{
                     $t('services.workflowAutomation.cta.title') }}</h2>
-                <NuxtLink to="/contact"
+                <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary active:scale-95 transition-all glow-button mt-6">
                     {{ $t('services.workflowAutomation.cta.ctaText') }}
                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                </NuxtLink>
+                </a>
             </div>
         </section>
     </main>

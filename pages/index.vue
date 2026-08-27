@@ -6,7 +6,7 @@
       <div class="absolute inset-0 grid-bg opacity-30 -z-10 pointer-events-none"></div>
       <div
         class="w-24 h-24 mb-8 rounded-xl bg-surface-card border border-border-subtle p-4 shadow-[0_0_30px_rgba(29,85,178,0.2)] flex items-center justify-center">
-        <img alt="BashPty Logo" src="/favicon.ico" class="w-full h-full object-contain opacity-90" />
+        <img alt="BashPty Logo" src="/bashpty.svg" class="w-full h-full object-contain opacity-90" />
       </div>
       <h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl mb-6">
         {{ $t('homepage.hero.title') }}
@@ -19,10 +19,10 @@
           class="bg-primary-container text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:bg-inverse-primary transition-colors glow-button active:scale-95 duration-100">
           {{ $t('homepage.hero.exploreServices') }}
         </NuxtLink>
-        <NuxtLink to="/contact"
+        <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
           class="bg-transparent text-on-surface border border-border-subtle px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-elevated hover:border-outline-variant transition-colors active:scale-95 duration-100">
           {{ $t('homepage.hero.scheduleAudit') }}
-        </NuxtLink>
+        </a>
       </div>
       <!-- Trust signals -->
       <div class="mt-20 pt-10 border-t border-border-subtle w-full max-w-3xl">
@@ -85,38 +85,42 @@
               }}</p>
           </div>
         </NuxtLink>
-        <!-- Business Intelligence -->
-        <NuxtLink to="/services/business-intelligence" class="bento-item rounded-xl p-6">
-          <div
-            class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-tertiary">
-            <span class="material-symbols-outlined">bar_chart</span>
-          </div>
-          <h3 class="font-headline-md text-headline-md text-on-surface mb-2">{{
-            $t('homepage.bento.businessIntelligence.title') }}</h3>
-          <p class="font-body-sm text-body-sm text-text-muted mb-4">{{
-            $t('homepage.bento.businessIntelligence.description') }}</p>
-          <div
-            class="h-24 w-full bg-surface-elevated border border-border-subtle rounded flex items-end p-2 gap-1 overflow-hidden opacity-70">
-            <div class="w-1/6 bg-tertiary/20 h-[30%] rounded-t"></div>
-            <div class="w-1/6 bg-tertiary/40 h-[50%] rounded-t"></div>
-            <div class="w-1/6 bg-tertiary/60 h-[40%] rounded-t"></div>
-            <div class="w-1/6 bg-tertiary/80 h-[70%] rounded-t"></div>
-            <div class="w-1/6 bg-tertiary h-[90%] rounded-t shadow-[0_0_10px_rgba(192,193,255,0.5)]"></div>
-            <div class="w-1/6 bg-tertiary/50 h-[60%] rounded-t"></div>
-          </div>
-        </NuxtLink>
-        <!-- Managed IT -->
-        <div class="bento-item rounded-xl p-6">
-          <div
-            class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-primary">
-            <span class="material-symbols-outlined">dns</span>
-          </div>
-          <h3 class="font-headline-md text-headline-md text-on-surface mb-2">{{ $t('homepage.bento.managedIT.title') }}
-          </h3>
-          <p class="font-body-sm text-body-sm text-text-muted">{{ $t('homepage.bento.managedIT.description') }}</p>
+        <!-- Business Intelligence + Managed IT — full-width 2-col row -->
+        <div class="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-bento-gap">
+          <!-- Business Intelligence -->
+          <NuxtLink to="/services/business-intelligence" class="bento-item rounded-xl p-6 flex flex-col">
+            <div
+              class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-tertiary">
+              <span class="material-symbols-outlined">bar_chart</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">{{
+              $t('homepage.bento.businessIntelligence.title') }}</h3>
+            <p class="font-body-sm text-body-sm text-text-muted mb-4">{{
+              $t('homepage.bento.businessIntelligence.description') }}</p>
+            <div class="w-full rounded-lg overflow-hidden border border-border-subtle mt-auto">
+              <img src="/bi.png" alt="Business Intelligence" class="w-full h-auto object-cover" />
+            </div>
+          </NuxtLink>
+          <!-- Managed IT -->
+          <NuxtLink to="/services/managed-it" class="bento-item rounded-xl p-6 flex flex-col">
+            <div
+              class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined">dns</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">{{ $t('homepage.bento.managedIT.title') }}
+            </h3>
+            <p class="font-body-sm text-body-sm text-text-muted mb-4">{{ $t('homepage.bento.managedIT.description') }}</p>
+            <div class="w-full rounded-lg overflow-hidden border border-border-subtle mt-auto">
+              <img src="/itcloud.png" alt="Managed IT & Infrastructure" class="w-full h-auto object-cover" />
+            </div>
+          </NuxtLink>
         </div>
-        <!-- Strategic Growth — spans 2 cols -->
-        <div class="bento-item rounded-xl p-6 lg:col-span-2 flex flex-col md:flex-row gap-6 items-center">
+        <!-- Strategic Growth — full width -->
+        <NuxtLink to="/services/strategic-growth" class="bento-item rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6 items-center">
+          <div class="flex-1 w-full rounded-lg overflow-hidden border border-border-subtle">
+            <img alt="Strategic Growth" class="w-full h-auto object-cover"
+              src="/strategic-growth.png" onerror="this.style.display='none'" />
+          </div>
           <div class="flex-1">
             <div
               class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-secondary">
@@ -127,11 +131,25 @@
             <p class="font-body-sm text-body-sm text-text-muted">{{ $t('homepage.bento.digitalMarketing.description') }}
             </p>
           </div>
-          <div class="flex-1 w-full flex justify-center">
-            <img alt="Strategic Growth" class="w-32 h-32 object-contain opacity-80 mix-blend-screen"
-              src="/strategic-growth.png" onerror="this.style.display='none'" />
+        </NuxtLink>
+        <!-- Emerging Tech -->
+        <NuxtLink to="/services/emerging-tech" class="bento-item rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6 items-center">
+          <div class="flex-1">
+            <div
+              class="w-10 h-10 rounded bg-surface-elevated border border-border-subtle flex items-center justify-center mb-6 text-tertiary">
+              <span class="material-symbols-outlined">hub</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">{{
+              $t('homepage.bento.web3Lab.title') }}</h3>
+            <p class="font-body-sm text-body-sm text-text-muted">{{ $t('homepage.bento.web3Lab.description') }}</p>
           </div>
-        </div>
+          <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div v-for="chip in ['currency_bitcoin', 'view_in_ar', 'smart_toy', 'hub']" :key="chip"
+              class="flex flex-col items-center gap-2 p-3 rounded-lg bg-surface-elevated border border-border-subtle">
+              <span class="material-symbols-outlined text-2xl text-tertiary">{{ chip }}</span>
+            </div>
+          </div>
+        </NuxtLink>
       </div>
     </section>
 
@@ -157,8 +175,8 @@
           </NuxtLink>
         </div>
         <div
-          class="flex-1 w-full aspect-video rounded-lg border border-border-subtle overflow-hidden relative bg-surface-elevated flex items-center justify-center">
-          <span class="material-symbols-outlined text-6xl text-border-subtle">polyline</span>
+          class="flex-1 w-full aspect-video rounded-lg border border-border-subtle overflow-hidden relative bg-surface-elevated">
+          <img :src="studycaseImage" alt="Case Study" class="w-full h-full object-cover" />
         </div>
       </div>
     </section>
@@ -168,10 +186,18 @@
       class="py-24 px-margin-mobile md:px-margin-desktop text-center border-t border-border-subtle bg-surface-elevated/30">
       <h2 class="font-display-lg text-display-lg text-on-surface mb-4">{{ $t('heroCta.title') }}</h2>
       <p class="font-body-lg text-body-lg text-text-muted max-w-xl mx-auto mb-8">{{ $t('heroCta.description') }}</p>
-      <NuxtLink to="/contact"
+      <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
         class="inline-block bg-primary-container text-on-primary px-8 py-4 rounded font-label-md text-label-md hover:bg-inverse-primary transition-colors glow-button active:scale-95 duration-100 text-lg">
         {{ $t('heroCta.button') }}
-      </NuxtLink>
+      </a>
     </section>
   </main>
 </template>
+
+<script setup lang="ts">
+const { locale } = useI18n()
+const supported = ['en', 'es', 'pt']
+const studycaseImage = computed(() =>
+  `/studycase-${supported.includes(locale.value) ? locale.value : 'en'}.png`
+)
+</script>

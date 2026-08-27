@@ -5,7 +5,7 @@
       class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2">
-        <img src="/favicon.ico" alt="BashPty" class="w-7 h-7 object-contain" />
+        <img src="/bashpty.svg" alt="BashPty" class="w-7 h-7 object-contain" />
         <span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">BashPty</span>
       </NuxtLink>
 
@@ -22,10 +22,10 @@
           class="hidden lg:block font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-2">
           {{ $t('header.contact') }}
         </NuxtLink>
-        <NuxtLink to="/contact"
+        <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
           class="bg-primary-container text-on-primary px-4 py-2 rounded font-label-md text-label-md hover:brightness-110 transition-all active:scale-95 hidden sm:block">
           {{ $t('header.scheduleCall') }}
-        </NuxtLink>
+        </a>
 
         <!-- Theme toggle -->
         <button

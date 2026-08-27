@@ -19,22 +19,17 @@
                             $t('services.businessIntelligence.hero.title') }}</h1>
                         <p class="font-body-lg text-body-lg text-text-muted max-w-xl">{{
                             $t('services.businessIntelligence.hero.subtitle') }}</p>
-                        <NuxtLink to="/contact"
+                        <a href="https://calendly.com/bashpty-507/30min" target="_blank" rel="noopener noreferrer"
                             class="px-6 py-3 rounded bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-2 hover:bg-inverse-primary active:scale-95 glow-button">
                             {{ $t('services.businessIntelligence.cta.ctaText') }}
                             <span class="material-symbols-outlined">arrow_forward</span>
-                        </NuxtLink>
+                        </a>
                     </div>
-                    <!-- BI dashboard mock -->
-                    <div
-                        class="relative w-full aspect-video rounded-lg overflow-hidden border border-border-subtle bg-surface-elevated flex items-end p-4 gap-1">
-                        <div class="w-1/6 bg-tertiary/20 rounded-t" style="height:30%"></div>
-                        <div class="w-1/6 bg-tertiary/40 rounded-t" style="height:55%"></div>
-                        <div class="w-1/6 bg-tertiary/60 rounded-t" style="height:40%"></div>
-                        <div class="w-1/6 bg-tertiary/80 rounded-t" style="height:70%"></div>
-                        <div class="w-1/6 bg-tertiary rounded-t shadow-[0_0_10px_rgba(192,193,255,0.5)]"
-                            style="height:90%"></div>
-                        <div class="w-1/6 bg-tertiary/50 rounded-t" style="height:60%"></div>
+                    <!-- BI deploy demo video -->
+                    <div class="relative w-full rounded-lg overflow-hidden border border-border-subtle">
+                        <video class="w-full h-auto block" autoplay loop muted playsinline>
+                            <source src="/bideploy.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
