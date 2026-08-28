@@ -1,0 +1,1 @@
+import{d as e}from"#entry";var t=e(`/bashpty.svg`);export{t};
