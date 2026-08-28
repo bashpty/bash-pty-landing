@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: process.env.NODE_ENV === "production" ? "/bash-pty-landing/" : "/",
+    baseURL: "/",
     head: {
       title: "Bash Pty",
       meta: [
@@ -61,9 +61,10 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/x-icon",
-          href: process.env.NODE_ENV === "production"
-            ? "/bash-pty-landing/favicon.ico"
-            : "/favicon.ico",
+          href:
+            process.env.NODE_ENV === "production"
+              ? "/bash-pty-landing/favicon.ico"
+              : "/favicon.ico",
         },
         {
           rel: "stylesheet",

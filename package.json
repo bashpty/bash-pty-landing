@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate && touch .output/public/.nojekyll && gh-pages -d .output/public --dotfiles",
+    "deploy": "nuxt generate && touch .output/public/.nojekyll && echo 'bashpty.com' > .output/public/CNAME && gh-pages -d .output/public --dotfiles",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
