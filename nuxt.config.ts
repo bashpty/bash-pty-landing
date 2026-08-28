@@ -51,6 +51,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: "/",
     head: {
       title: "Bash Pty",
       meta: [

@@ -5,7 +5,7 @@
       class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2">
-        <img src="/bashpty.svg" alt="BashPty" class="w-7 h-7 object-contain" />
+        <img :src="publicUrl('/bashpty.svg')" alt="BashPty" class="w-7 h-7 object-contain" />
         <span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">BashPty</span>
       </NuxtLink>
 
@@ -59,7 +59,7 @@
           <button
             class="flex items-center gap-1.5 border border-border-subtle rounded px-2 py-1.5 hover:border-outline-variant transition-colors bg-surface-elevated"
             @click="langOpen = !langOpen" :aria-label="$t('header.language')">
-            <img :src="`/flags/${locale}.svg`" :alt="locale" class="w-5 h-4 object-cover rounded-sm" />
+            <img :src="publicUrl(`/flags/${locale}.svg`)" :alt="locale" class="w-5 h-4 object-cover rounded-sm" />
             <!-- chevron-down SVG -->
             <svg xmlns="http://www.w3.org/2000/svg"
               class="w-3.5 h-3.5 text-on-surface-variant transition-transform duration-200"
@@ -74,7 +74,7 @@
               class="flex items-center gap-2 w-full px-3 py-2 text-left font-body-sm text-body-sm hover:bg-surface-container transition-colors"
               :class="l.code === locale ? 'text-primary' : 'text-on-surface-variant'"
               @click="setLocale(l.code as string); langOpen = false">
-              <img :src="`/flags/${l.code}.svg`" :alt="String(l.code)" class="w-5 h-4 object-cover rounded-sm" />
+              <img :src="publicUrl(`/flags/${l.code}.svg`)" :alt="String(l.code)" class="w-5 h-4 object-cover rounded-sm" />
               {{ l.name }}
             </button>
           </div>
@@ -87,6 +87,7 @@
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
 const { theme, cycle } = useTheme()
+const publicUrl = usePublicUrl()
 const langOpen = ref(false)
 
 const navLinks = [

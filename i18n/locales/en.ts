@@ -258,11 +258,11 @@ export default {
       },
       email: {
         label: "Direct Email",
-        value: "info@bashpty.com",
+        value: "info{'@'}bashpty.com",
       },
       location: {
         label: "Headquarters",
-        value: "San Francisco, CA",
+        value: "Panama City, PA",
       },
     },
     serviceOptions: {
@@ -1061,7 +1061,7 @@ export default {
         },
         {
           title: "5. Your Privacy Rights",
-          body: "You have the right to access, rectify, cancel or object to the processing of your personal information at any time. To exercise these rights in accordance with the laws of the Republic of Panama, you may contact our team directly at info@bashpty.com.",
+          body: "You have the right to access, rectify, cancel or object to the processing of your personal information at any time. To exercise these rights in accordance with the laws of the Republic of Panama, you may contact our team directly at info{'@'}bashpty.com.",
         },
       ],
     },
