@@ -1,0 +1,600 @@
+{
+  "welcome": "Bienvenido",
+  "header": {
+    "services": "Servicios",
+    "caseStudies": "Casos de Éxito",
+    "aboutUs": "Nosotros",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "scheduleCall": "Agendar Llamada de Estrategia",
+    "servicesList": {
+      "customSoftware": "Software a Medida y Arquitectura en la Nube",
+      "workflowAutomation": "Automatización Inteligente de Flujos de Trabajo",
+      "businessIntelligence": "Inteligencia de Negocios",
+      "managedIT": "Servicios Gestionados de TI e Infraestructura",
+      "digitalMarketing": "Servicios de Crecimiento Estratégico",
+      "web3Lab": "Tecnología Emergente y Web3"
+    }
+  },
+  "homepage": {
+    "meta": {
+      "title": "Bash Pty - Automatización Basada en Datos y Crecimiento Integrado",
+      "description": "Su Socio para la Automatización Basada en Datos y el Crecimiento Integrado. Construimos y gestionamos su pila tecnológica completa, desde TI resiliente y software a medida hasta automatización inteligente y paneles de BI."
+    },
+    "hero": {
+      "title": "Bash Pty: Su Socio para la Automatización Basada en Datos y el Crecimiento Integrado.",
+      "subtitle": "Construimos y gestionamos su pila tecnológica completa, desde TI resiliente y software a medida hasta automatización inteligente y paneles de BI.",
+      "exploreServices": "Explore Nuestros Servicios",
+      "scheduleAudit": "Agende su Auditoría de Automatización Gratuita",
+      "accelerate": "Acelere Su Stack",
+      "viewCaseStudies": "Ver Casos de Éxito"
+    },
+    "bento": {
+      "customSoftware": {
+        "title": "Software a Medida y Arquitectura en la Nube",
+        "description": "Aplicaciones escalables construidas sobre una pila moderna (Vue, Java, Python)."
+      },
+      "workflowAutomation": {
+        "title": "Automatización Inteligente de Flujos de Trabajo",
+        "description": "Construimos automatizaciones pro-código con n8n que reducen costos y escalan operaciones."
+      },
+      "businessIntelligence": {
+        "title": "Inteligencia de Negocios",
+        "description": "BI de autoservicio que todo su equipo puede usar. Con tecnología de Metabase."
+      },
+      "managedIT": {
+        "title": "Servicios Gestionados de TI e Infraestructura",
+        "description": "Soporte preventivo 24/7 y gestión de servidores."
+      },
+      "digitalMarketing": {
+        "title": "Servicios de Crecimiento Estratégico",
+        "description": "SEO basado en datos y embudos de marketing automatizados."
+      },
+      "web3Lab": {
+        "title": "Tecnología Emergente y Web3",
+        "description": "Su socio de I+D para proyectos de DeFi, KYC e IoT."
+      },
+      "sectionTitle": "Arquitectura Principal",
+      "sectionSubtitle": "Soluciones modulares diseñadas para resiliencia, claridad y escala exponencial."
+    }
+  },
+  "trustSignals": {
+    "trustedBy": "Con la confianza de las empresas líderes de Panamá:"
+  },
+  "caseStudyCard": {
+    "badge": "Métrica de Éxito",
+    "title": "Reducción del 67% en el procesamiento manual",
+    "description": "Vea cómo diseñamos un pipeline logístico automatizado que eliminó por completo los protocolos de ingreso de datos heredados, logrando una velocidad operacional sin precedentes.",
+    "readMore": "Leer el Caso de Estudio Completo"
+  },
+  "heroCta": {
+    "title": "¿Listo para Acelerar?",
+    "description": "Implemente automatización inteligente y obtenga visibilidad total de sus métricas operativas. Conéctese con nuestro equipo de ingeniería hoy.",
+    "button": "Iniciar Despliegue"
+  },
+  "caseStudyHighlight": {
+    "title": "Caso de Estudio Destacado",
+    "reduction": {
+      "title": "Reducción del 67% en el procesamiento manual",
+      "description": "Proceso de facturación automatizado con n8n, ahorrando más de 40 horas por semana."
+    },
+    "increase": {
+      "title": "Aumento de 3 veces en la generación de leads",
+      "description": "SEO basado en datos y embudos de marketing automatizados."
+    },
+    "seeAll": "Ver Todos los Casos de Estudio"
+  },
+  "finalCta": {
+    "title": "¿Listo para Acelerar su Negocio?",
+    "subtitle": "Deje de gestionar tickets y comience a generar impulso. Agende una llamada de estrategia gratuita y sin compromiso con nuestros arquitectos expertos.",
+    "scheduleCall": "Agendar Llamada de Estrategia"
+  },
+  "footer": {
+    "tagline": "Su Socio para la Automatización Basada en Datos y el Crecimiento Integrado.",
+    "foundation": {
+      "title": "Fundación",
+      "customSoftware": "Software a Medida",
+      "managedIT": "TI Gestionada e Infraestructura",
+      "web3Lab": "Laboratorio de Tecnología Emergente y Web3"
+    },
+    "growth": {
+      "title": "Crecimiento",
+      "intelligentAutomation": "Automatización Inteligente",
+      "businessIntelligence": "Inteligencia de Negocios",
+      "digitalMarketing": "Crecimiento Estratégico (SEO/SEM)"
+    },
+    "company": {
+      "title": "Compañía",
+      "caseStudies": "Casos de Éxito",
+      "aboutUs": "Nosotros",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "copyright": "© Bash Pty. Todos los derechos reservados.",
+      "privacyPolicy": "Política de Privacidad",
+      "termsAndConditions": "Términos y Condiciones"
+    }
+  },
+  "about": {
+    "title": "Nosotros"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "caseStudies": {
+    "title": "Casos de Éxito"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contáctenos - Bash Pty",
+      "description": "Ya sea que tenga un proyecto de software complejo o necesite auditar su pila de automatización, nuestro equipo está listo para ayudar."
+    },
+    "title": "Construyamos su Solución",
+    "subtitle": "Ya sea que tenga un proyecto de software complejo o necesite auditar su pila de automatización, nuestro equipo está listo para ayudar.",
+    "form": {
+      "fullName": "Nombre Completo",
+      "workEmail": "Correo Electrónico de Trabajo",
+      "phone": "Teléfono",
+      "companyName": "Nombre de la Empresa",
+      "service": "Servicio de Interés",
+      "selectService": "Seleccione un Servicio",
+      "projectDetails": "Detalles del Proyecto",
+      "submit": "Enviar Detalles del Proyecto"
+    }
+  },
+  "services": {
+    "businessIntelligence": {
+      "meta": {
+        "title": "Inteligencia de Negocios de Código Abierto - Bash Pty",
+        "description": "Implementamos Metabase y Superset para construir paneles de BI que todo su equipo realmente puede usar, sin necesidad de SQL."
+      },
+      "hero": {
+        "title": "Inteligencia de Negocios de Código Abierto",
+        "subtitle": "Implementamos Metabase y Superset para construir paneles de BI que todo su equipo realmente puede usar, sin necesidad de SQL."
+      },
+      "problem": {
+        "title": "El Problema B2B",
+        "description": "Sus datos están atrapados en silos. Las costosas herramientas de BI son demasiado complejas, lo que obliga a su equipo a depender de analistas para cada informe simple."
+      },
+      "solution": {
+        "title": "Nuestra Solución (Características Clave)",
+        "selfService": {
+          "title": "Autoservicio para Todos",
+          "description": "Implementamos Metabase, la plataforma de BI tan intuitiva que sus equipos no técnicos pueden 'consultar datos sin escribir código'."
+        },
+        "secure": {
+          "title": "Seguro y de Código Abierto",
+          "description": "Auto-alojamos Metabase o Superset en su infraestructura, garantizando total privacidad de los datos y sin dependencia de proveedores."
+        },
+        "advanced": {
+          "title": "Análisis Avanzado",
+          "description": "Para los equipos de datos, implementamos Apache Superset para consultas SQL avanzadas y visualizaciones complejas y personalizadas."
+        }
+      },
+      "offerings": {
+        "title": "Ofertas de Servicio",
+        "deployment": {
+          "title": "Implementación de BI de Autoservicio",
+          "description": "Implementación, configuración y modelado de datos de Metabase"
+        },
+        "embedded": {
+          "title": "Análisis Embebido para SaaS",
+          "subtitle": "Superpoderes de Análisis Instantáneos para su Producto",
+          "intro": "Convierta su aplicación en una potencia de análisis sin escribir una línea de código de gráficos. Implementamos un motor Metabase de marca blanca que se integra perfectamente en su producto existente.",
+          "solution": {
+            "title": "Integración Invisible",
+            "features": {
+              "whiteLabel": {
+                "title": "Marca Blanca Total",
+                "description": "Eliminamos la marca Metabase. Su logotipo. Sus colores. Sus fuentes. Su URL."
+              },
+              "ux": {
+                "title": "UX Perfecta",
+                "description": "Usamos inyección CSS personalizada para que los gráficos coincidan perfectamente con su interfaz de usuario."
+              },
+              "mobile": {
+                "title": "Respuesta Móvil",
+                "description": "Gráficos que se redimensionan automáticamente para sus clientes en dispositivos móviles."
+              }
+            }
+          },
+          "security": {
+            "title": "La Garantía de 'Seguridad y Escala'",
+            "features": {
+              "sandboxed": "Datos en Sandbox: Configuramos reglas de permisos granulares a nivel de base de datos.",
+              "jwt": "Autenticación JWT: Construimos el 'apretón de manos' backend usando JSON Web Tokens para asegurar el aislamiento de datos.",
+              "scalability": "Escalabilidad: Ya sea que tenga 10 usuarios o 10,000, la arquitectura sigue siendo la misma."
+            }
+          },
+          "roadmap": {
+            "title": "Hoja de Ruta de Implementación",
+            "steps": {
+              "blueprint": "Fase 1: El Plano - Mapeo de necesidades de datos y configuración de la 'Base de Datos Sombra'.",
+              "logic": "Fase 2: La Lógica - Construcción de paneles maestros con lógica variable dinámica.",
+              "embed": "Fase 3: La Incrustación - Provisión de fragmentos de código y manejo de firma segura para el despliegue."
+            }
+          },
+          "businessCase": {
+            "title": "Por qué esto cambia el juego",
+            "points": [
+              "Aumentar ARPU: Bloquee paneles y cobre extra por 'Análisis Premium'.",
+              "Adherencia: Los clientes que interactúan con datos abandonan significativamente menos.",
+              "Velocidad al Mercado: Supere a sus competidores lanzando una suite de análisis completa en días."
+            ]
+          },
+          "techSpecs": {
+            "title": "Especificaciones Técnicas",
+            "specs": {
+              "auth": "Autenticación: JWT (JSON Web Token) con Clave Secreta Compartida.",
+              "frameworks": "Frameworks Frontend: Compatible con React, Vue, Angular, Svelte, Bubble.io, Webflow, Retool.",
+              "isolation": "Aislamiento de Datos: Sandbox a través de cláusulas SQL WHERE inyectadas dinámicamente mediante parámetros.",
+              "styling": "Estilo: Inyección CSS personalizada para fuentes, bordes y paletas de colores para coincidir con el Sistema de Diseño.",
+              "exporting": "Exportación: Los usuarios pueden descargar sus propios datos (CSV/XLSX) directamente desde la vista incrustada."
+            }
+          },
+          "cta": {
+            "title": "Despliegue su Suite de Análisis",
+            "text": "¿Listo para dar a sus usuarios los datos que anhelan? Construyamos su solución embebida."
+          }
+        },
+        "monitoring": {
+          "title": "Monitoreo en Tiempo Real (Grafana e IoT)",
+          "subtitle": "Observabilidad Centralizada y Monitoreo de IoT Industrial",
+          "intro": "No puedes arreglar lo que no puedes ver. Implementamos Grafana para crear un panel de control único para toda tu infraestructura. Ya sea que un servidor falle en AWS o un sensor de temperatura se sobrecaliente en un almacén, lo sabrás antes que tus clientes.",
+          "flavors": {
+            "title": "Dos 'Sabores' Distintos de Observabilidad",
+            "devops": {
+              "title": "A. El 'Salvador de DevOps' (Monitoreo de Infraestructura)",
+              "focus": "Para Startups SaaS y E-commerce con alto tráfico.",
+              "stack": "La Trinidad 'Monito': Prometheus (Métricas) + Loki (Logs) + Grafana (Visualización).",
+              "pitch": "Reemplazamos tus archivos de registro dispersos y puntos ciegos con un Control de Misión 24/7. Si una página de pago se ralentiza 200ms, recibes una alerta de Slack al instante."
+            },
+            "iot": {
+              "title": "B. El 'Pulso Industrial' (IoT y Datos en Tiempo Real)",
+              "focus": "Para Manufactura, Logística, Edificios Inteligentes, Energía.",
+              "stack": "La Pila 'TIG': Telegraf (Agente) + InfluxDB (Base de Datos de Series Temporales) + Grafana (Visualización).",
+              "pitch": "Construimos la tubería que convierte el ruido de los sensores en señales operativas. Rastrea la ubicación de la flota, la humedad del almacén o la vibración de la máquina en tiempo real."
+            }
+          },
+          "whiteLabel": {
+            "title": "La Realidad de la 'Marca Blanca'",
+            "partner": {
+              "title": "El Enfoque de 'Socio' (Recomendado)",
+              "description": "Adoptamos la marca de confianza 'Powered by Grafana'. Grafana es el estándar de la industria: mostrar a tus clientes que lo usas demuestra que eres técnicamente serio."
+            },
+            "enterprise": {
+              "title": "La Venta Ascendente 'Enterprise'",
+              "description": "Si necesitas eliminar el logotipo, podemos adquirir una licencia de Grafana Enterprise para una marca blanca completa e informes avanzados."
+            }
+          },
+          "tiers": {
+            "title": "Niveles de Servicio",
+            "tier1": {
+              "title": "Nivel 1: 'La Torre de Vigilancia' (Monitoreo Básico)",
+              "focus": "Enfoque: Tiempo de actividad y salud.",
+              "deliverables": [
+                "Configuración de Grafana + Prometheus dockerizados.",
+                "Instalación de Node Exporter en hasta 5 servidores.",
+                "Paneles Estándar: CPU, Memoria, E/S de Disco.",
+                "Alertas Básicas (Slack/Email)."
+              ]
+            },
+            "tier2": {
+              "title": "Nivel 2: 'La Tubería IoT' (Hardware Personalizado)",
+              "focus": "Enfoque: Operaciones Físicas.",
+              "deliverables": [
+                "Configuración de Broker MQTT (Mosquitto) con TLS.",
+                "Políticas de retención de InfluxDB.",
+                "Paneles Personalizados: 'Vista de Planta de Fábrica'."
+              ]
+            },
+            "tier3": {
+              "title": "Nivel 3: 'Observabilidad Completa' (Logs + Trazas)",
+              "focus": "Enfoque: Solución de problemas de aplicaciones complejas.",
+              "deliverables": [
+                "Integración de Loki para logs.",
+                "Exportador Blackbox (Monitoreo Sintético).",
+                "Monitoreo de Clúster Kubernetes (K8s)."
+              ]
+            }
+          },
+          "cta": {
+            "title": "Tus servidores están hablando. ¿Estás escuchando?",
+            "text": "Un fallo a las 3:00 AM te cuesta dinero. Construimos el panel que te permite dormir tranquilo."
+          }
+        }
+      },
+      "cta": {
+        "title": "Tome Decisiones Basadas en Datos",
+        "ctaText": "Solicite una Demostración de Panel Personalizado"
+      }
+    },
+    "workflowAutomation": {
+      "meta": {
+        "title": "Automatización Inteligente de Flujos de Trabajo - Bash Pty",
+        "description": "Construimos automatizaciones pro-código escalables utilizando n8n para conectar sus aplicaciones, eliminar el trabajo manual e impulsar la eficiencia."
+      },
+      "hero": {
+        "title": "Automatización Inteligente de Flujos de Trabajo",
+        "subtitle": "Construimos automatizaciones pro-código escalables utilizando n8n para conectar sus aplicaciones, eliminar el trabajo manual e impulsar la eficiencia."
+      },
+      "problem": {
+        "title": "El Problema B2B",
+        "description": "Su equipo está atrapado en tareas de 'copiar y pegar'. Las herramientas estándar como Zapier son demasiado caras a escala y carecen de la flexibilidad que necesita."
+      },
+      "solution": {
+        "title": "Nuestra Solución (Características Clave)",
+        "sovereignty": {
+          "title": "Soberanía de Datos",
+          "description": "Auto-alojamos n8n en su nube privada, dándole 100% de control sobre sus datos para un cumplimiento total."
+        },
+        "scale": {
+          "title": "Escala Rentable",
+          "description": "Escape de los precios 'por tarea'. Nuestros sistemas basados en n8n manejan millones de ejecuciones a una fracción del costo."
+        },
+        "flexibility": {
+          "title": "Flexibilidad Ilimitada",
+          "description": "Escribimos nodos personalizados de JavaScript/Python e integramos cualquier API, automatizando procesos que las herramientas sin código no pueden tocar."
+        }
+      },
+      "offerings": {
+        "title": "Ofertas de Servicio",
+        "development": {
+          "title": "Desarrollo de Flujos de Trabajo Personalizados (Odoo ERP y CRM)",
+          "subtitle": "Optimice su negocio con Odoo ERP y CRM",
+          "intro": "Deje de hacer malabares con múltiples aplicaciones desconectadas para ventas, contabilidad e inventario. Nos especializamos en la instalación experta, configuración y puesta en marcha de Odoo, el software ERP y CRM de código abierto más popular del mundo. Ya sea que sea una pequeña empresa que busca organizar sus clientes potenciales o una empresa que necesita una revisión operativa completa, construimos el sistema que se adapta a su flujo de trabajo, no al revés.",
+          "whyOdoo": {
+            "title": "¿Por qué elegir Odoo?",
+            "points": {
+              "unified": "Datos unificados: Su CRM habla con su Inventario, que actualiza su Contabilidad automáticamente. No más doble entrada.",
+              "cost": "Rentable: Diga adiós a las costosas tarifas de licencia de proveedores heredados como SAP o Salesforce.",
+              "modular": "Modular y escalable: Comience solo con el CRM para impulsar las ventas y agregue Inventario o Gestión de proyectos más tarde a medida que crezca."
+            }
+          },
+          "packages": {
+            "title": "Nuestros Paquetes de Servicios",
+            "crm": {
+              "title": "1. Configuración de Odoo CRM (Aceleración de Ventas)",
+              "description": "Perfecto para empresas enfocadas en aumentar los ingresos y organizar los datos de los clientes.",
+              "features": {
+                "pipeline": "Configuración de Pipeline: Etapas personalizadas (por ejemplo, 'Nuevo Lead' -> 'Calificado' -> 'Propuesta Enviada') adaptadas a su ciclo de ventas.",
+                "communication": "Comunicación Automatizada: Configuración de plantillas de correo electrónico y seguimientos automatizados para garantizar que ningún cliente potencial se quede atrás.",
+                "capture": "Captura de Leads: Integración con los formularios de contacto de su sitio web y sistemas VoIP para capturar leads automáticamente.",
+                "dashboard": "Panel de Informes: Vistas en tiempo real de sus pronósticos de ventas, rendimiento del equipo e ingresos mensuales."
+              }
+            },
+            "erp": {
+              "title": "2. Implementación Completa de Odoo ERP (Excelencia Operativa)",
+              "description": "Una solución integral para centralizar toda su operación comercial.",
+              "features": {
+                "integration": "Integración de Módulos: Conexión perfecta de los módulos de CRM, Ventas, Inventario, Compras, Contabilidad y RRHH.",
+                "installation": "Instalación del Servidor: Despliegue seguro en alojamiento en la nube (AWS, Google Cloud, DigitalOcean) o en sus servidores locales.",
+                "migration": "Migración de Datos: Migración profesional de sus datos existentes (listas de clientes, catálogos de productos, ventas históricas) desde Excel, Quickbooks o sistemas heredados.",
+                "localization": "Localización Contable: Configuración de impuestos, monedas y planes de cuentas específicos para las regulaciones de su país."
+              }
+            }
+          },
+          "process": {
+            "title": "Nuestro Proceso de Implementación",
+            "steps": {
+              "discovery": "1. Descubrimiento y Análisis: Auditamos sus flujos de trabajo actuales para identificar cuellos de botella y personalizaciones requeridas.",
+              "deployment": "2. Despliegue y Configuración: Instalamos Odoo y configuramos el entorno técnico (SSL, copias de seguridad, firewalls de seguridad).",
+              "customization": "3. Personalización: Ajustamos la interfaz y los informes para que coincidan con su marca y preferencias operativas.",
+              "training": "4. Capacitación y Entrega: No lo dejamos adivinando. Brindamos sesiones de capacitación para su equipo y documentación de entrega."
+            }
+          },
+          "whyUs": {
+            "title": "¿Por qué trabajar con nosotros?",
+            "points": {
+              "expertise": "Experiencia Certificada: Nuestro equipo está formado por desarrolladores experimentados y consultores funcionales.",
+              "tailored": "Soluciones a Medida: Evitamos configuraciones 'genéricas'. Configuramos Odoo para que coincida con su lógica de negocio.",
+              "support": "Soporte Post-Instalación: Ofrecemos paquetes de mantenimiento continuo para manejar actualizaciones, parches de seguridad y resolución de problemas."
+            }
+          },
+          "cta": {
+            "title": "¿Listo para Transformar su Flujo de Trabajo?",
+            "text": "No deje que los datos desorganizados lo retrasen. Permítanos construir el motor que impulse el crecimiento de su negocio."
+          }
+        },
+        "agents": {
+          "title": "Agentes Impulsados por IA (Desarrollo MCP Personalizado)",
+          "subtitle": "Fuerza Laboral Autónoma para su Empresa",
+          "intro": "Vamos más allá de los chatbots simples. Construimos servidores de Protocolo de Contexto de Modelo (MCP) personalizados y agentes de IA que actúan como conectores inteligentes entre sus LLMs (como Claude o GPT-4) y sus datos y aplicaciones comerciales internas. Empodere a su empresa con agentes que pueden analizar, razonar y actuar.",
+          "useCases": {
+            "title": "Casos de Uso de Alto Impacto",
+            "hr": {
+              "title": "Automatización de RRHH y Onboarding",
+              "description": "Agentes que generan contratos automáticamente, configuran cuentas de correo electrónico, programan reuniones de inducción y responden preguntas de política para nuevos empleados de inmediato."
+            },
+            "finance": {
+              "title": "Finanzas y Contabilidad",
+              "description": "Agentes de auditoría inteligente que escanean facturas, las relacionan con Órdenes de Compra (PO) en su ERP, marcan anomalías y preparan ejecuciones de pago para aprobación."
+            },
+            "stock": {
+              "title": "Gestión de Inventario y Stock",
+              "description": "Agentes de cadena de suministro que predicen escasez de stock basándose en tendencias de ventas, redactan solicitudes de reorden y optimizan la ubicación en el almacén."
+            }
+          },
+          "whyMCP": {
+            "title": "¿Por qué Agentes MCP Personalizados?",
+            "features": {
+              "security": {
+                "title": "Seguridad y Control de Datos",
+                "description": "Sus datos propietarios permanecen dentro de su entorno controlado. El agente accede solo a lo que necesita a través de herramientas API seguras y personalizadas."
+              },
+              "context": {
+                "title": "Contexto Comercial Profundo",
+                "description": "La IA genérica adivina; nuestros MCP personalizados saben. Están entrenados en su lógica comercial específica, jerga y esquema de base de datos."
+              },
+              "action": {
+                "title": "Resultados Orientados a la Acción",
+                "description": "Estos agentes no solo hablan. Ejecutan consultas SQL, envían solicitudes API, actualizan registros y activan flujos de trabajo automáticamente."
+              }
+            }
+          },
+          "cta": {
+            "title": "Despliegue su Fuerza Laboral Digital",
+            "text": "¿Listo para automatizar tareas cognitivas complejas? Definamos el alcance de su primer Agente de IA."
+          }
+        },
+        "sales": {
+          "title": "Automatización de Ventas y Marketing",
+          "description": "Enriquecimiento automatizado de leads, activadores de embudo personalizados"
+        },
+        "consulting": {
+          "title": "Consultoría de Pila de Automatización",
+          "subtitle": "Agilidad de una Startup, Escalabilidad de una Empresa",
+          "intro": "Deje de contratar para tareas repetitivas. Comience a contratar para el crecimiento. Construimos el sistema nervioso digital de su negocio utilizando n8n, Make y Zapier, integrando cualquier software que utilice, incluso si no tiene un complemento nativo.",
+          "strategy": {
+            "title": "La Estrategia de 'La Herramienta Adecuada para el Trabajo'",
+            "platforms": {
+              "zapier": {
+                "name": "Zapier",
+                "use": "Velocidad y MVPs",
+                "pitch": "El Inicio Rápido. Perfecto para validación y tareas simples y lineales. Es la forma más rápida de obtener su primera victoria sin deuda técnica."
+              },
+              "make": {
+                "name": "Make (Integromat)",
+                "use": "Lógica Compleja",
+                "pitch": "El Cerebro Visual. Mejor cuando necesita árboles de decisión. Maneja la manipulación de datos y el enrutamiento complejo mejor que Zapier a un costo menor."
+              },
+              "n8n": {
+                "name": "n8n",
+                "use": "Escala y Alta Tecnología",
+                "pitch": "El Motor Empresarial. El cambio de juego para la escalabilidad. Permite el auto-alojamiento, ejecuciones de flujo de trabajo ilimitadas y codificación personalizada."
+              }
+            }
+          },
+          "integration": {
+            "title": "Integración de API Universal",
+            "description": "La mayoría de las agencias están limitadas por la 'App Store'. Nos especializamos en Automatización API-First.",
+            "features": {
+              "beyond": "Más allá de los complementos: Si su software tiene una API (REST, GraphQL o SOAP), podemos conectarlo.",
+              "webhooks": "Webhooks personalizados: Construimos escuchas que reaccionan instantáneamente cuando los datos cambian en sus sistemas heredados.",
+              "auth": "Manejadores de autenticación: Manejamos OAuth2 complejo, claves API y tokens portadores."
+            }
+          },
+          "packages": {
+            "title": "Paquetes de Servicios Propuestos",
+            "tier1": {
+              "title": "Nivel 1: El Sprint de Eficiencia (Zapier/Make)",
+              "focus": "Enfoque: Fruta al alcance de la mano.",
+              "deliverables": [
+                "Automatización de captura de leads (Anuncios → CRM)",
+                "Automatización de facturación (Stripe → QuickBooks/Xero)",
+                "Bots de notificación básicos (Alertas de Slack/Teams)"
+              ]
+            },
+            "tier2": {
+              "title": "Nivel 2: El Arquitecto de Procesos (Make/n8n)",
+              "focus": "Enfoque: Flujos de trabajo interdepartamentales.",
+              "deliverables": [
+                "Viajes de incorporación de clientes",
+                "Tuberías de publicación de contenido",
+                "Enriquecimiento de datos"
+              ]
+            },
+            "tier3": {
+              "title": "Nivel 3: El Ecosistema Personalizado (n8n Auto-alojado)",
+              "focus": "Enfoque: Alto volumen, alta seguridad, bajo costo marginal.",
+              "deliverables": [
+                "Automatización de marca blanca",
+                "Desarrollo de API personalizada",
+                "Cumplimiento de GDPR/HIPAA"
+              ]
+            }
+          },
+          "cta": {
+            "title": "Su software debería hablar entre sí",
+            "text": "No solo 'configuramos zaps'; diseñamos tuberías de datos resistentes que funcionan como su equipo de operaciones 24/7."
+          }
+        }
+      },
+      "testimonial": {
+        "quote": "Bash Pty automatizó todo nuestro proceso de facturación con n8n, ahorrándonos más de 40 horas por semana.",
+        "author": "John Doe, CEO de Example Corp"
+      },
+      "cta": {
+        "title": "Deje de Ahogarse en Trabajo Manual",
+        "ctaText": "Agende su Auditoría de Automatización Gratuita"
+      }
+    },
+    "customSoftware": {
+      "meta": {
+        "title": "Desarrollo de Software a Medida - Bash Pty",
+        "description": "Creamos software a medida, aplicaciones de marca blanca y pipelines de CI/CD para ayudarle a escalar."
+      },
+      "hero": {
+        "title": "Desarrollo de Software a Medida",
+        "description": "Nos especializamos en el desarrollo de software a medida, implementando soluciones customizadas para cualquier rubro comercial. Ofrecemos software de marca blanca, adaptando software libre con su propio branding. Además, creamos pipelines de integración y despliegue continuo (CI/CD) para la automatización, versionamiento y despliegue en la nube, cumpliendo con los más altos estándares de la industria. También brindamos asesorías en arquitectura de software para cualquier tipo de proyecto o transformación digital en su empresa."
+      },
+      "solution": {
+        "title": "Nuestra Solución (Características Clave)",
+        "features": {
+          "feature1": {
+            "title": "Desarrollo de Software a Medida",
+            "description": "Implementamos software customizado en cualquier rugro comercial."
+          },
+          "feature2": {
+            "title": "Software de Marca Blanca",
+            "description": "Customizamos software libre con el branding o marca propia."
+          },
+          "feature3": {
+            "title": "Automatización, Versionamiento y Despliegue en Nube",
+            "description": "Creamos pipelines de integración y despliegue continuo que cumpla con todo los estandares actuales de la industria."
+          },
+          "feature4": {
+            "title": "Asesorías de Arquitectura de Software",
+            "description": "Realizamos asesoria de cualquier tipo de proyecto de software o transformación digital en la empresa."
+          }
+        }
+      },
+      "technologies": {
+        "title": "Nuestro Stack Tecnológico",
+        "wordpress": {
+          "dev": "Más allá de sus raíces como plataforma de blogs, WordPress es un potente CMS para aplicaciones empresariales. Aprovechamos su flexibilidad para construir soluciones escalables, seguras y altamente personalizadas, incluyendo arquitecturas de CMS headless para la entrega de contenido multiplataforma.",
+          "devops": "Implementamos robustos pipelines de CI/CD basados en Git para WordPress, permitiendo pruebas automatizadas y despliegues fluidos. Nuestras configuraciones multi-entorno (desarrollo, staging, producción) y el monitoreo del rendimiento garantizan la estabilidad y fiabilidad para sitios de alto tráfico."
+        },
+        "dotnet": {
+          "dev": ".NET es nuestra elección para aplicaciones empresariales multiplataforma de alto rendimiento. Construimos microservicios escalables y soluciones nativas de la nube con un enfoque en la seguridad y la robustez.",
+          "devops": "Aprovechamos Azure DevOps para crear pipelines de CI/CD integrales para aplicaciones .NET. Nuestra experiencia en la contenerización con Docker e Infraestructura como Código (IaC) con Terraform garantiza despliegues automatizados, consistentes y eficientes."
+        },
+        "java": {
+          "dev": "El robusto ecosistema de Java y su independencia de la plataforma lo hacen ideal para sistemas empresariales a gran escala. Nos especializamos en la construcción de microservicios y aplicaciones nativas de la nube utilizando frameworks modernos como Spring Boot, asegurando escalabilidad y eficiencia.",
+          "devops": "Implementamos una estrategia de DevOps integral para aplicaciones Java, incluyendo pruebas automatizadas, integración continua con Jenkins o GitHub Actions, y despliegues en contenedores con Docker y Kubernetes. También integramos prácticas de seguridad (DevSecOps) en todo el pipeline."
+        },
+        "python": {
+          "dev": "La versatilidad de Python nos permite construir aplicaciones web escalables y potentes servicios de backend con frameworks como Django y Flask. También aprovechamos Python para el procesamiento de datos y el desarrollo de APIs.",
+          "devops": "Python es nuestra herramienta preferida para la automatización de DevOps. Escribimos scripts para automatizar pruebas, despliegues y aprovisionamiento de infraestructura (usando herramientas como Ansible). También construimos paneles de monitoreo personalizados y los integramos con pipelines de CI/CD para optimizar todo el ciclo de vida del desarrollo."
+        },
+        "flutter": {
+          "dev": "Flutter nos permite construir aplicaciones móviles multiplataforma hermosas y de alto rendimiento desde una única base de código. Nos enfocamos en crear una experiencia de usuario fluida tanto para iOS como para Android.",
+          "devops": "Implementamos robustos pipelines de CI/CD para Flutter para automatizar el proceso de construcción, prueba y despliegue para ambas plataformas. Esto incluye pruebas unitarias, de widgets y de integración, así como despliegues automatizados en las tiendas de aplicaciones y entornos de prueba."
+        },
+        "vue": {
+          "dev": "La arquitectura basada en componentes y la flexibilidad de Vue.js lo convierten en una excelente opción para aplicaciones web modernas. Construimos interfaces de usuario reactivas, de alto rendimiento y mantenibles, aprovechando estrategias como la Generación de Sitios Estáticos (SSG) y el Renderizado del Lado del Servidor (SSR).",
+          "devops": "Creamos eficientes pipelines de CI/CD para aplicaciones Vue.js utilizando herramientas como GitHub Actions. Nuestras estrategias de despliegue incluyen la contenerización con Docker y el alojamiento en servicios en la nube escalables como AWS y Vercel, asegurando alta disponibilidad y rendimiento."
+        },
+        "react": {
+          "dev": "React es nuestro framework de elección para construir interfaces de usuario complejas y basadas in componentes. Seguimos las mejores prácticas para la estructura de proyectos, la gestión del estado y las pruebas para crear aplicaciones escalables y mantenibles.",
+          "devops": "Implementamos pipelines de CI/CD integrales para aplicaciones React, con pruebas unitarias y de extremo a extremo automatizadas. Utilizamos protección de ramas, entornos de staging y monitoreo para garantizar lanzamientos fiables y de alta calidad."
+        }
+      },
+      "cta": {
+        "title": "Construyamos su Próxima Solución de Software",
+        "description": "¿Listo para discutir su proyecto? Agende una llamada gratuita con nuestros arquitectos de software.",
+        "button": "Agendar una Llamada"
+      }
+    },
+    "digitalMarketing": {
+      "title": "Servicios de Crecimiento Estratégico"
+    },
+    "managedIT": {
+      "title": "TI Gestionada e Infraestructura"
+    },
+    "web3Lab": {
+      "title": "Laboratorio de Tecnología Emergente y Web3"
+    }
+  }
+}
