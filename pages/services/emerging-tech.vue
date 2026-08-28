@@ -58,7 +58,7 @@
                     loop
                     muted
                     playsinline>
-                    <source src="/kyc.mp4" type="video/mp4" />
+                    <source :src="publicUrl('/kyc.mp4')" type="video/mp4" />
                 </video>
             </div>
         </section>
@@ -106,6 +106,7 @@
 </template>
 
 <script setup lang="ts">
+const publicUrl = usePublicUrl()
 const { tm, rt } = useI18n()
 
 const features = computed(() =>

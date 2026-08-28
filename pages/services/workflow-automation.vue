@@ -27,7 +27,7 @@
                 <div
                     class="relative bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
                     <video class="w-full h-auto block" autoplay loop muted playsinline>
-                        <source src="/n8n.mp4" type="video/mp4" />
+                        <source :src="publicUrl('/n8n.mp4')" type="video/mp4" />
                     </video>
                     <div class="absolute bottom-0 left-0 right-0 bg-background/80 backdrop-blur-sm border-t border-border-subtle px-4 py-2">
                         <p class="font-code-sm text-code-sm text-text-muted">// Executing workflow:
@@ -148,3 +148,7 @@
         </section>
     </main>
 </template>
+
+<script setup lang="ts">
+const publicUrl = usePublicUrl()
+</script>

@@ -51,13 +51,20 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: process.env.NODE_ENV === "production" ? "/bash-pty-landing/" : "/",
     head: {
       title: "Bash Pty",
       meta: [
         { name: "description", content: "Tu mejor elección tecnológica 🖥️" },
       ],
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: process.env.NODE_ENV === "production"
+            ? "/bash-pty-landing/favicon.ico"
+            : "/favicon.ico",
+        },
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
