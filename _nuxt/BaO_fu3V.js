@@ -1,1 +1,0 @@
-import{a as e}from"./CJ1g07MO.js";var t=()=>{let t=e().app.baseURL.replace(/\/$/,``);return e=>`${t}${e}`};export{t};
