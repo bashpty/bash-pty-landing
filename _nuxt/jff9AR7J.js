@@ -1,1 +1,0 @@
-import{a as e}from"./WCzGfQV4.js";var t=()=>{let t=e().app.baseURL.replace(/\/$/,``);return e=>`${t}${e}`};export{t};
