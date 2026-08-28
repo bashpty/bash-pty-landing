@@ -5,7 +5,7 @@
       <div class="md:col-span-1">
         <NuxtLink to="/"
           class="font-headline-md text-headline-md font-bold text-on-surface mb-4 flex items-center gap-2">
-          <img src="/bashpty.svg" alt="BashPty" class="w-5 h-5 object-contain opacity-80" />
+          <img :src="publicUrl('/bashpty.svg')" alt="BashPty" class="w-5 h-5 object-contain opacity-80" />
           BashPty
         </NuxtLink>
         <p class="font-body-sm text-body-sm text-text-muted mt-2">{{ $t('footer.legal.copyright') }} {{
@@ -80,3 +80,7 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const publicUrl = usePublicUrl()
+</script>

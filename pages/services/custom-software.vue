@@ -67,7 +67,7 @@
                     <div v-for="tech in technologies" :key="tech.key"
                         class="bg-surface-card border border-border-subtle rounded-xl p-6">
                         <div class="flex items-center gap-3 mb-4">
-                            <img :src="`/${tech.key}.svg`" :alt="tech.name"
+                            <img :src="publicUrl(`/${tech.key}.svg`)" :alt="tech.name"
                                 class="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0" />
                             <h3 class="font-headline-md text-headline-md text-on-surface">{{ tech.name }}</h3>
                         </div>
@@ -95,6 +95,7 @@
 </template>
 
 <script setup lang="ts">
+const publicUrl = usePublicUrl()
 const technologies = [
     { key: 'vue', name: 'Vue / Nuxt' },
     { key: 'react', name: 'React' },

@@ -261,11 +261,11 @@ export default {
       },
       email: {
         label: "E-mail Direto",
-        value: "info@bashpty.com",
+        value: "info{'@'}bashpty.com",
       },
       location: {
         label: "Sede Principal",
-        value: "San Francisco, CA",
+        value: "Panama City, PA",
       },
     },
     serviceOptions: {
@@ -997,7 +997,7 @@ export default {
         },
         {
           title: "5. Seus Direitos de Privacidade",
-          body: "Voc\u00ea tem o direito de acessar, retificar, cancelar ou se opor ao tratamento de suas informa\u00e7\u00f5es pessoais a qualquer momento. Para exercer esses direitos de acordo com as leis da Rep\u00fablica do Panam\u00e1, voc\u00ea pode entrar em contato com nossa equipe pelo e-mail info@bashpty.com.",
+          body: "Você tem o direito de acessar, retificar, cancelar ou se opor ao tratamento de suas informações pessoais a qualquer momento. Para exercer esses direitos de acordo com as leis da República do Panamá, você pode entrar em contato com nossa equipe pelo e-mail info{'@'}bashpty.com.",
         },
       ],
     },

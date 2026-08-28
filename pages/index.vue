@@ -6,7 +6,7 @@
       <div class="absolute inset-0 grid-bg opacity-30 -z-10 pointer-events-none"></div>
       <div
         class="w-24 h-24 mb-8 rounded-xl bg-surface-card border border-border-subtle p-4 shadow-[0_0_30px_rgba(29,85,178,0.2)] flex items-center justify-center">
-        <img alt="BashPty Logo" src="/bashpty.svg" class="w-full h-full object-contain opacity-90" />
+        <img alt="BashPty Logo" :src="publicUrl('/bashpty.svg')" class="w-full h-full object-contain opacity-90" />
       </div>
       <h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl mb-6">
         {{ $t('homepage.hero.title') }}
@@ -98,7 +98,7 @@
             <p class="font-body-sm text-body-sm text-text-muted mb-4">{{
               $t('homepage.bento.businessIntelligence.description') }}</p>
             <div class="w-full rounded-lg overflow-hidden border border-border-subtle mt-auto">
-              <img src="/bi.png" alt="Business Intelligence" class="w-full h-auto object-cover" />
+              <img :src="publicUrl('/bi.png')" alt="Business Intelligence" class="w-full h-auto object-cover" />
             </div>
           </NuxtLink>
           <!-- Managed IT -->
@@ -111,7 +111,7 @@
             </h3>
             <p class="font-body-sm text-body-sm text-text-muted mb-4">{{ $t('homepage.bento.managedIT.description') }}</p>
             <div class="w-full rounded-lg overflow-hidden border border-border-subtle mt-auto">
-              <img src="/itcloud.png" alt="Managed IT & Infrastructure" class="w-full h-auto object-cover" />
+              <img :src="publicUrl('/itcloud.png')" alt="Managed IT & Infrastructure" class="w-full h-auto object-cover" />
             </div>
           </NuxtLink>
         </div>
@@ -119,7 +119,7 @@
         <NuxtLink to="/services/strategic-growth" class="bento-item rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6 items-center">
           <div class="flex-1 w-full rounded-lg overflow-hidden border border-border-subtle">
             <img alt="Strategic Growth" class="w-full h-auto object-cover"
-              src="/strategic-growth.png" onerror="this.style.display='none'" />
+              :src="publicUrl('/strategic-growth.png')" onerror="this.style.display='none'" />
           </div>
           <div class="flex-1">
             <div
@@ -196,8 +196,9 @@
 
 <script setup lang="ts">
 const { locale } = useI18n()
+const publicUrl = usePublicUrl()
 const supported = ['en', 'es', 'pt']
 const studycaseImage = computed(() =>
-  `/studycase-${supported.includes(locale.value) ? locale.value : 'en'}.png`
+  publicUrl(`/studycase-${supported.includes(locale.value) ? locale.value : 'en'}.png`)
 )
 </script>

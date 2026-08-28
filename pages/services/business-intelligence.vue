@@ -28,7 +28,7 @@
                     <!-- BI deploy demo video -->
                     <div class="relative w-full rounded-lg overflow-hidden border border-border-subtle">
                         <video class="w-full h-auto block" autoplay loop muted playsinline>
-                            <source src="/bideploy.mp4" type="video/mp4" />
+                            <source :src="publicUrl('/bideploy.mp4')" type="video/mp4" />
                         </video>
                     </div>
                 </div>
@@ -159,3 +159,7 @@
         </section>
     </main>
 </template>
+
+<script setup lang="ts">
+const publicUrl = usePublicUrl()
+</script>
